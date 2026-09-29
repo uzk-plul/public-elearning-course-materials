@@ -13,11 +13,11 @@ html{background:var(--blue-50)}
 body{font-family:var(--font);background:var(--blue-50);color:var(--gray-700);-webkit-font-smoothing:antialiased;padding:20px 14px 28px}
 button{font-family:inherit}
 a{color:var(--blue)}
-.shell{max-width:472px;margin:0 auto}
+.shell{max-width:600px;margin:0 auto}
 .topbar{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:14px}
 .brand{line-height:1.6;font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
 .stand{font-size:10.5px;color:var(--gray-500);letter-spacing:.04em}
-.card{background:#fff;border-radius:14px;box-shadow:0 6px 24px rgba(0,81,118,.11),0 1px 3px rgba(0,0,0,.04);overflow:hidden}
+.card{background:#fff;border-radius:14px;box-shadow:0 6px 24px rgba(0,81,118,.11),0 1px 3px rgba(0,0,0,.04);overflow:hidden;overflow:clip}
 .hero{background:var(--blue);padding:24px 24px 20px;color:#fff}
 .eyebrow{font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#CFE0EA;margin-bottom:10px}
 .hero h1{font-size:22px;line-height:1.28;font-weight:700;text-wrap:balance}
@@ -26,7 +26,8 @@ a{color:var(--blue)}
 .stat{background:rgba(255,255,255,.12);border-radius:8px;padding:8px 6px;text-align:center}
 .stat b{display:block;font-size:18px;font-weight:800;line-height:1.1}
 .stat span{font-size:10.5px;color:#DCE8EF;line-height:1.25;display:block;margin-top:2px;white-space:nowrap}
-.tabs{display:grid;grid-template-columns:repeat(3,1fr);background:#fff;border-bottom:1px solid var(--blue-100)}
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);background:#fff;border-bottom:1px solid var(--blue-100);position:sticky;top:0;z-index:5}
+.mod{scroll-margin-top:56px}
 .tab{background:none;border:none;border-bottom:3px solid transparent;padding:12px 4px 10px;font-size:12.5px;font-weight:700;color:var(--gray-500);cursor:pointer;letter-spacing:.02em}
 .tab:hover{color:var(--blue)}
 .tab[aria-selected="true"]{color:var(--blue);border-bottom-color:var(--cyan)}
@@ -178,6 +179,17 @@ details.more .body{padding:0 0 12px}
 .rt,.rd,.dtitle,.dkurz,.hero h1,.st-t,.st-d,.step h3,.cta-card h3,.goal{text-wrap:balance}
 p,li,.rule,.faq-item span,.ph span,.matc span,.step p,.hint span,.fact span,.tip,.lead,.flow span{text-wrap:pretty}
 .st-z,.rz,.ph em,.fact small,.tags span,.step .meta,.code,.dcode,.back,.pn,.tab,.seg button,.cluster span{white-space:nowrap}
+@media (max-width:440px){
+body{padding:14px 10px 20px}
+.topbar{flex-direction:column;align-items:flex-start;gap:4px}
+.hero{padding:20px 18px 18px}
+.hero h1{font-size:20px}
+.stats{grid-template-columns:repeat(2,1fr)}
+.faq-item{grid-template-columns:1fr;gap:3px}
+.flow div{grid-template-columns:24px 1fr;row-gap:2px}
+.flow span{grid-column:2}
+.facts{grid-template-columns:1fr}
+}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -346,9 +358,13 @@ function render(focusSel){
   renderTabs();
   document.getElementById('view').innerHTML = {ueberblick:vUeberblick,ablauf:vAblauf,bausteine:vBausteine}[S.tab]();
   bindLastWords(document.getElementById('view'));
+  if (window.__embedHeight) window.__embedHeight();
   if (focusSel){ const el = document.querySelector(focusSel); if (el) el.focus({preventScroll:true}); }
 }
-function scrollToEl(sel){ const el = document.querySelector(sel); if (el) try{ el.scrollIntoView({behavior:'smooth',block:'start'}); }catch(e){} }
+function scrollToEl(sel){ const el = document.querySelector(sel); if (!el) return;
+  const y = el.getBoundingClientRect().top + window.scrollY - (sel === '#top' ? 8 : 56);
+  window.scrollTo(0, Math.max(0,y));
+  if (window.__embedScroll) window.__embedScroll(y); }
 function openModule(id){ S.tab='bausteine'; S.stage=stageOf(id); S.open=id; S.sub='info'; render('#dtitle'); scrollToEl('#top'); }
 
 document.addEventListener('click', e => {
@@ -371,6 +387,31 @@ document.addEventListener('keydown', e => {
 });
 render();
 bindLastWords(document.querySelector('.hero'));
+/* ── Einbettung: Höhe an die einbettende Seite melden ── */
+(function(){
+  if (window.parent === window) return;
+  var last = 0, box = document.querySelector('.shell') || document.body;
+  function measure(){
+    var pb = parseFloat(getComputedStyle(document.body).paddingBottom) || 0;
+    return Math.ceil(box.getBoundingClientRect().bottom + (window.scrollY || 0) + pb);
+  }
+  function send(){
+    var h = measure();
+    if (Math.abs(h - last) < 2) return;
+    last = h;
+    window.parent.postMessage({type:'resize', height:h}, '*');
+    window.parent.postMessage({subject:'lti.frameResize', height:h}, '*');
+  }
+  window.__embedScroll = function(top){ window.parent.postMessage({type:'scrollTo', top:Math.max(0, Math.round(top||0))}, '*'); };
+  window.__embedHeight = function(){ last = 0; send(); };
+  if ('ResizeObserver' in window) new ResizeObserver(send).observe(box);
+  window.addEventListener('load', send);
+  window.addEventListener('resize', send);
+  document.addEventListener('toggle', send, true);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(send);
+  setInterval(send, 1000);
+  send();
+})();
 </script>
 </body>
 </html>
