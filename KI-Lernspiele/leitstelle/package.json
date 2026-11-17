@@ -1,0 +1,9 @@
+{
+  "name": "leitstelle",
+  "private": true,
+  "type": "module",
+  "description": "Lernspiel Leitstelle – keine Abhängigkeiten. Diese Datei sorgt nur dafür, dass Node die ES-Module in js/ lädt.",
+  "scripts": {
+    "validate": "node scripts/validate-missions.mjs"
+  }
+}
