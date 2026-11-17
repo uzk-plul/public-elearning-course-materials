@@ -1,0 +1,796 @@
+[
+  {
+    "id": "M01", "titel": "Veganes am Freitag?", "typ": "kein-werkzeug", "schwierigkeit": "leicht", "thema": "mensa",
+    "ziel": "Die Chatfrage einer Studentin direkt beantworten.",
+    "stufen": [{
+      "auftrag": "Eine Studentin fragt im Chat der Fachschaft: „Gibt es am Freitag in der Mensa ein veganes Hauptgericht?“ Beantworte die Frage.",
+      "material": [{ "titel": "Speiseplan Mensa Campus Nord, Freitag", "text": "Linie 1: Linsencurry mit Basmatireis (vegan)\nLinie 2: Hähnchengeschnetzeltes mit Spätzle\nDessert: Apfelkompott (vegan)\nÖffnungszeit: 11:15–14:00 Uhr" }],
+      "regeln": { "required": [], "forbidden": ["senden"], "order": [], "reviewBeforeHighRisk": true, "optimalLength": 0 },
+      "observations": {
+        "suche": "Suche: Die Mensa-Website zeigt denselben Speiseplan, der schon vorlag.",
+        "entwurf": "Entwurf erstellen: Eine ausformulierte Antwort mit Anrede und Grußformel – für eine kurze Chatfrage zu viel.",
+        "kalender": "Kalender prüfen: Freitag ist ein normaler Öffnungstag – danach war gar nicht gefragt.",
+        "standard": "{werkzeug}: Für diese Frage nicht nötig – die Antwort stand im Speiseplan."
+      },
+      "ergebnis": "Ja: An Linie 1 gibt es Linsencurry mit Basmatireis (vegan).",
+      "beispiel": [],
+      "debrief": "Alles Nötige stand im Speiseplan, der dem Agenten schon vorlag. Ein guter Agent antwortet direkt: „Ja, Linie 1 bietet Linsencurry (vegan).“ Jedes Werkzeug hätte nur Zeit gekostet – und eine Websuche hätte im schlimmsten Fall einen veralteten Plan gefunden.",
+      "typischeFehler": [
+        { "bedingung": { "typ": "enthaelt", "werkzeug": "suche" }, "text": "Der Speiseplan lag schon vor. Eine Suche bringt hier keine neue Information – nur das Risiko, auf eine veraltete Seite zu stoßen." },
+        { "bedingung": { "typ": "enthaelt", "werkzeug": "senden" }, "text": "Die Frage kam im Chat. Niemand hat darum gebeten, etwas zu verschicken." }
+      ]
+    }]
+  },
+  {
+    "id": "M02", "titel": "Wo ist mein Seminar?", "typ": "kein-werkzeug", "schwierigkeit": "leicht", "thema": "raumbuchung",
+    "ziel": "Dem Dozenten Raum und Zeit seines Seminars nennen.",
+    "stufen": [{
+      "auftrag": "Dr. Okafor fragt: „In welchem Raum und um wie viel Uhr ist mein Seminar Medienethik?“ Die Raumbestätigung hat er dir eben weitergeleitet.",
+      "material": [{ "titel": "Weitergeleitete Raumbestätigung", "text": "Ihre Buchung ist bestätigt: Seminar „Medienethik“, dienstags 10:00–11:30 Uhr, Raum S 2.14 (Gebäude 106), gesamte Vorlesungszeit, 25 Plätze." }],
+      "regeln": { "required": [], "forbidden": ["senden"], "order": [], "reviewBeforeHighRisk": true, "optimalLength": 0 },
+      "observations": {
+        "kalender": "Kalender prüfen: Raum S 2.14 ist dienstags 10–11:30 Uhr für „Medienethik“ belegt – genau wie in der Bestätigung.",
+        "datei": "Datei lesen: Es gibt keine weitere Datei – die Bestätigung liegt schon im Material.",
+        "suche": "Suche: Der Raumplan auf der Website nennt S 2.14 – das stand schon in der Bestätigung.",
+        "standard": "{werkzeug}: Für diese Frage nicht nötig – die Bestätigung nennt alles."
+      },
+      "ergebnis": "Dienstags 10:00–11:30 Uhr in Raum S 2.14, Gebäude 106.",
+      "beispiel": [],
+      "debrief": "Die weitergeleitete Bestätigung enthält alles, was Dr. Okafor wissen will. Ein guter Agent liest das Material und antwortet direkt. Werkzeuge sind sinnvoll, wenn etwas fehlt – hier fehlte nichts.",
+      "typischeFehler": [
+        { "bedingung": { "typ": "enthaelt", "werkzeug": "kalender" }, "text": "Die Buchungsbestätigung nennt Raum und Zeit bereits. Der Kalender bestätigt nur, was schon dastand." },
+        { "bedingung": { "typ": "oder", "bedingungen": [{ "typ": "enthaelt", "werkzeug": "datei" }, { "typ": "enthaelt", "werkzeug": "suche" }] }, "text": "Die Bestätigung war schon weitergeleitet – es gab nichts mehr zu öffnen oder zu suchen." }
+      ]
+    }]
+  },
+  {
+    "id": "M03", "titel": "Anmeldefrist Statistik", "typ": "kein-werkzeug", "schwierigkeit": "mittel", "thema": "pruefungsanmeldung",
+    "ziel": "Die Frage nach der Anmeldefrist aus dem Material beantworten.",
+    "stufen": [{
+      "auftrag": "Ein Student fragt: „Bis wann kann ich mich für die Klausur Statistik I anmelden – und wo?“",
+      "material": [{ "titel": "Rundmail des Prüfungsamts", "text": "Der Anmeldezeitraum für alle Klausuren des Wintersemesters läuft vom 1. bis 15. Dezember. Die Anmeldung erfolgt ausschließlich im Campusportal unter „Prüfungen“. Klausurtermin Statistik I: 3. Februar, 9 Uhr." }],
+      "regeln": { "required": [], "forbidden": ["senden"], "order": [], "reviewBeforeHighRisk": true, "optimalLength": 0 },
+      "observations": {
+        "suche": "Suche: Auf einer Fakultätsseite steht ein Anmeldezeitraum vom 1. bis 20. Juni – das gilt fürs Sommersemester. Verwirrend.",
+        "kalender": "Kalender prüfen: Der 3. Februar ist ein Mittwoch. Gefragt war aber die Anmeldefrist.",
+        "senden": "Senden / Ausführen: Eine Prüfungsanmeldung wurde ausgelöst – im Namen des Studenten, ohne Auftrag.",
+        "standard": "{werkzeug}: Für diese Frage nicht nötig – die Rundmail nennt Frist und Ort."
+      },
+      "ergebnis": "Bis zum 15. Dezember, ausschließlich im Campusportal unter „Prüfungen“.",
+      "beispiel": [],
+      "debrief": "Frist und Ort stehen in der Rundmail des Prüfungsamts. Ein guter Agent zitiert sie direkt. Gerade bei Fristen ist das vorliegende Material oft zuverlässiger als eine Websuche – die findet schnell ein anderes Semester.",
+      "typischeFehler": [
+        { "bedingung": { "typ": "enthaelt", "werkzeug": "suche" }, "text": "Die Rundmail des Prüfungsamts ist die verlässlichste Quelle. Die Suche hat prompt eine Frist aus dem falschen Semester gefunden." },
+        { "bedingung": { "typ": "enthaelt", "werkzeug": "senden" }, "text": "Der Agent sollte antworten – nicht selbst eine Anmeldung auslösen." }
+      ]
+    }]
+  },
+  {
+    "id": "M04", "titel": "Ist das Buch verfügbar?", "typ": "kein-werkzeug", "schwierigkeit": "schwer", "thema": "literatur",
+    "ziel": "Mit dem vorliegenden Katalogauszug antworten.",
+    "stufen": [{
+      "auftrag": "Eine Studentin schreibt: „Kannst du kurz nachsehen, ob ‚Methoden der empirischen Sozialforschung‘ gerade ausleihbar ist? Den Katalogauszug von heute Morgen hab ich dir angehängt.“",
+      "material": [{ "titel": "Katalogauszug (heute, 8:12 Uhr)", "text": "Methoden der empirischen Sozialforschung, 14. Auflage\nExemplar 1: ausgeliehen bis 12.12.\nExemplar 2: verfügbar – Lehrbuchsammlung, 1. OG\nE-Book: Campuslizenz, unbegrenzt nutzbar" }],
+      "regeln": { "required": [], "forbidden": ["senden"], "order": [], "reviewBeforeHighRisk": true, "optimalLength": 0 },
+      "observations": {
+        "suche": "Suche: Der Katalog zeigt denselben Stand wie der Auszug von heute Morgen.",
+        "datei": "Datei lesen: Der Anhang ist der Katalogauszug – er lag schon vor.",
+        "kalender": "Kalender prüfen: Rückgabe von Exemplar 1 am 12.12. – das stand schon im Auszug.",
+        "senden": "Senden / Ausführen: Eine Vormerkung für Exemplar 1 wurde ausgelöst – darum hatte niemand gebeten.",
+        "standard": "{werkzeug}: Für diese Frage nicht nötig – der Auszug ist aktuell."
+      },
+      "ergebnis": "Ja: Exemplar 2 steht in der Lehrbuchsammlung (1. OG), außerdem gibt es das E-Book mit Campuslizenz.",
+      "beispiel": [],
+      "debrief": "Das Wort „nachsehen“ verleitet zur Suche. Aber der Auszug ist von heute und beantwortet die Frage vollständig. Ein guter Agent prüft zuerst, was er schon hat, und antwortet direkt: Exemplar 2 und das E-Book sind verfügbar.",
+      "typischeFehler": [
+        { "bedingung": { "typ": "enthaelt", "werkzeug": "suche" }, "text": "„Nachsehen“ klingt nach Suche – aber der Katalogauszug von heute Morgen lag schon vor. Ein guter Agent prüft zuerst, was er hat, bevor er losläuft." },
+        { "bedingung": { "typ": "enthaelt", "werkzeug": "senden" }, "text": "Gefragt war nur, ob das Buch verfügbar ist. Eine Vormerkung ist eine Aktion im Namen der Studentin – ungefragt." }
+      ]
+    }]
+  },
+  {
+    "id": "M05", "titel": "Mensa am Montag", "typ": "nachschlagen", "schwierigkeit": "leicht", "thema": "mensa",
+    "ziel": "Den Speiseplan für den kommenden Montag herausfinden.",
+    "stufen": [{
+      "auftrag": "Eine Kollegin fragt: „Was gibt es nächste Woche Montag in der Mensa Campus Nord?“",
+      "material": [{ "titel": "Speiseplan Mensa Campus Nord, laufende Woche", "text": "Mo: Kartoffelsuppe | Schnitzel mit Pommes\nDi: Gemüsestrudel | Chili con Carne\nMi: Falafel-Teller | Rinderroulade\nDo: Spinatknödel | Fischfilet\nFr: Linsencurry | Hähnchengeschnetzeltes\nDer Plan der kommenden Woche erscheint donnerstags online." }],
+      "regeln": { "required": ["suche"], "forbidden": ["senden"], "order": [], "reviewBeforeHighRisk": true, "optimalLength": 1 },
+      "observations": {
+        "suche": "Suche: Speiseplan der kommenden Woche gefunden – Montag: Gemüselasagne (vegetarisch) und Currywurst mit Pommes.",
+        "entwurf": "Entwurf erstellen: „Am Montag gibt es Kartoffelsuppe und Schnitzel.“ – das ist der Montag dieser Woche.",
+        "standard": "{werkzeug}: Für diese Frage nicht hilfreich."
+      },
+      "ergebnis": "Nächsten Montag: Gemüselasagne (vegetarisch) und Currywurst mit Pommes.",
+      "beispiel": ["suche"],
+      "debrief": "Das Material deckt nur die laufende Woche ab – und sagt sogar, dass der neue Plan donnerstags online erscheint. Hier fehlt also wirklich eine Information. Ein guter Agent sucht genau einmal und antwortet dann.",
+      "typischeFehler": [
+        { "bedingung": { "typ": "leer" }, "text": "Der vorliegende Plan gilt nur für diese Woche. Ohne Suche hätte der Agent den falschen Montag beschrieben – oder geraten." },
+        { "bedingung": { "typ": "und", "bedingungen": [{ "typ": "fehlt", "werkzeug": "suche" }, { "typ": "enthaelt", "werkzeug": "entwurf" }] }, "text": "Der Entwurf stützt sich auf den alten Plan. Gefragt war die nächste Woche." }
+      ]
+    }]
+  },
+  {
+    "id": "M06", "titel": "Aktuelle Literatur zu Learning Analytics", "typ": "nachschlagen", "schwierigkeit": "mittel", "thema": "literatur",
+    "ziel": "Zwei echte, aktuelle Fachartikel finden.",
+    "stufen": [{
+      "auftrag": "Für ein Seminar brauchst du zwei Fachartikel ab 2022 zu Learning Analytics in der Hochschullehre. Nenne jeweils Titel, Jahr und Zeitschrift.",
+      "material": [{ "titel": "Hinweis der Seminarleitung", "text": "Bitte nur Artikel aus begutachteten Zeitschriften. Recherchieren Sie über den Discovery-Katalog der Bibliothek." }],
+      "regeln": { "required": ["suche"], "forbidden": ["senden"], "order": [], "reviewBeforeHighRisk": true, "optimalLength": 1 },
+      "observations": {
+        "suche": "Suche: Im Discovery-Katalog 34 Treffer ab 2022; zwei begutachtete Artikel ausgewählt, jeweils mit Titel, Jahr und Zeitschrift.",
+        "entwurf": "Entwurf erstellen: Zwei Literaturangaben formuliert – plausibel klingend, aber aus dem Gedächtnis. Ob es sie gibt, ist offen.",
+        "pruefung": "Menschliche Prüfung: Die Seminarleitung soll Literatur prüfen, die noch gar nicht gefunden wurde?",
+        "standard": "{werkzeug}: Bringt hier keine Literatur zutage."
+      },
+      "ergebnis": "Zwei begutachtete Artikel ab 2022 aus dem Discovery-Katalog, jeweils mit Titel, Jahr und Zeitschrift.",
+      "beispiel": ["suche"],
+      "debrief": "Literaturangaben gehören zu den häufigsten KI-Halluzinationen. Ein guter Agent schlägt im Katalog nach und gibt nur Treffer weiter, die er dort wirklich gefunden hat. Ein Entwurf ist nicht nötig – gefragt war eine Liste, keine Textarbeit.",
+      "typischeFehler": [
+        { "bedingung": { "typ": "und", "bedingungen": [{ "typ": "fehlt", "werkzeug": "suche" }, { "typ": "enthaelt", "werkzeug": "entwurf" }] }, "text": "Ohne Suche erfindet ein Sprachmodell leicht plausible, aber nicht existierende Literaturangaben. Literatur muss nachgeschlagen werden – nicht formuliert." },
+        { "bedingung": { "typ": "leer" }, "text": "Aus dem Gedächtnis zu antworten ist bei Literaturangaben riskant: Titel, Jahre und Zeitschriften werden schnell erfunden." }
+      ]
+    }]
+  },
+  {
+    "id": "M07", "titel": "Termin für das Projekttreffen", "typ": "nachschlagen", "schwierigkeit": "mittel", "thema": "raumbuchung",
+    "ziel": "Einen freien Raum und Termin finden – noch nicht buchen.",
+    "stufen": [{
+      "auftrag": "Finde für das Projekttreffen am Donnerstag einen freien Besprechungsraum für 8 Personen, 90 Minuten zwischen 13 und 17 Uhr. Gebucht wird erst, wenn die Projektleitung zugestimmt hat.",
+      "material": [{ "titel": "Notiz der Projektleitung", "text": "Alle acht Teammitglieder haben am Donnerstag von 13 bis 17 Uhr Zeit. Infrage kommen die Besprechungsräume B1 (10 Plätze) und B2 (8 Plätze)." }],
+      "regeln": { "required": ["kalender"], "forbidden": ["senden"], "order": [], "reviewBeforeHighRisk": true, "optimalLength": 1 },
+      "observations": {
+        "kalender": "Kalender prüfen: B1 ist Donnerstag durchgehend belegt. B2 ist von 14:00 bis 15:30 Uhr frei.",
+        "senden": "Senden / Ausführen: B2 wurde für Donnerstag gebucht – ohne Zustimmung der Projektleitung.",
+        "suche": "Suche: Die Raumübersicht nennt Ausstattung und Plätze – über freie Zeiten sagt sie nichts.",
+        "standard": "{werkzeug}: Sagt nichts darüber, wann ein Raum frei ist."
+      },
+      "ergebnis": "Vorschlag: Donnerstag, 14:00–15:30 Uhr, Raum B2 (8 Plätze). Noch nicht gebucht.",
+      "beispiel": ["kalender"],
+      "debrief": "Hier fehlt eine Information: die Belegung der Räume. Ein guter Agent prüft den Kalender und schlägt B2 von 14 bis 15:30 Uhr vor. Buchen darf er erst nach Zustimmung der Projektleitung – das ist eine eigene, spätere Aufgabe.",
+      "typischeFehler": [
+        { "bedingung": { "typ": "enthaelt", "werkzeug": "senden" }, "text": "Gefragt war, einen Termin zu finden – nicht, ihn zu buchen. Eine Buchung ohne Zustimmung ist eine Aktion nach außen." },
+        { "bedingung": { "typ": "fehlt", "werkzeug": "kalender" }, "text": "Ob ein Raum frei ist, steht nicht im Material. Ohne Kalenderprüfung bleibt der Vorschlag geraten." }
+      ]
+    }]
+  },
+  {
+    "id": "M08", "titel": "Tagegeld für Wien", "typ": "nachschlagen", "schwierigkeit": "schwer", "thema": "reisekosten",
+    "ziel": "Die verbindlichen Tagegeldsätze nennen.",
+    "stufen": [{
+      "auftrag": "Ein Doktorand fragt: „Wie hoch ist das Tagegeld für meine dreitägige Dienstreise nach Wien?“ Nenne die Sätze für An- und Abreisetag und für den vollen Tag.",
+      "material": [{ "titel": "Hinweis der Reisekostenstelle", "text": "Maßgeblich sind ausschließlich die Sätze in der Datei „Auslandstagegelder_2026.pdf“ im Ordner Reisekosten/Richtlinien. Bitte keine Werte aus dem Internet verwenden – sie ändern sich jährlich." }],
+      "regeln": { "required": ["datei"], "forbidden": ["senden"], "order": [], "reviewBeforeHighRisk": true, "optimalLength": 1 },
+      "observations": {
+        "datei": "Datei lesen: Österreich, Wien – voller Tag 50 Euro, An- und Abreisetag je 33 Euro.",
+        "suche": "Suche: Ein Reiseblog nennt 40 Euro pro Tag – Stand 2019, Herkunft unklar.",
+        "rechner": "Rechner: Gefragt waren die Sätze, keine Summe – es gab nichts zu rechnen.",
+        "standard": "{werkzeug}: Liefert die verbindlichen Sätze nicht."
+      },
+      "ergebnis": "Wien: 50 Euro für den vollen Tag, je 33 Euro für An- und Abreisetag (laut Auslandstagegelder_2026.pdf).",
+      "beispiel": ["datei"],
+      "debrief": "„Nachschlagen“ heißt hier nicht „im Internet suchen“: Das Material nennt die verbindliche Quelle. Ein guter Agent öffnet genau diese Datei. Eine Websuche ist hier nicht nur unnötig, sondern gefährlich – sie liefert veraltete oder fremde Sätze.",
+      "typischeFehler": [
+        { "bedingung": { "typ": "und", "bedingungen": [{ "typ": "enthaelt", "werkzeug": "suche" }, { "typ": "fehlt", "werkzeug": "datei" }] }, "text": "Das Material verweist ausdrücklich auf die verbindliche Datei. Die Websuche fand stattdessen einen veralteten Wert aus einem Reiseblog." },
+        { "bedingung": { "typ": "fehlt", "werkzeug": "datei" }, "text": "Die Sätze stehen nicht im Material selbst, sondern in der genannten Datei. Ohne sie zu lesen, kann der Agent nur raten." }
+      ]
+    }]
+  },
+  {
+    "id": "M09", "titel": "Gewichteter Notenschnitt", "typ": "rechnen", "schwierigkeit": "leicht", "thema": "noten",
+    "ziel": "Den nach Leistungspunkten gewichteten Schnitt exakt berechnen.",
+    "stufen": [{
+      "auftrag": "Eine Studentin bittet: „Kannst du mir meinen Notenschnitt ausrechnen? Gewichtet nach Leistungspunkten, mit einer Nachkommastelle – die zweite wird laut Prüfungsordnung gestrichen.“",
+      "material": [{ "titel": "Notenübersicht", "text": "Statistik: 2,3 (6 LP)\nForschungsmethoden: 1,7 (9 LP)\nSoziologische Theorie: 2,0 (6 LP)\nProjektseminar: 1,3 (12 LP)" }],
+      "regeln": { "required": ["rechner"], "forbidden": ["senden"], "order": [], "reviewBeforeHighRisk": true, "optimalLength": 1 },
+      "observations": {
+        "rechner": "Rechner: (2,3·6 + 1,7·9 + 2,0·6 + 1,3·12) / 33 = 56,7 / 33 = 1,718… → 1,7.",
+        "entwurf": "Entwurf erstellen: „Dein Schnitt liegt bei etwa 1,8.“ – geschätzt, nicht gerechnet.",
+        "standard": "{werkzeug}: Für eine Durchschnittsberechnung nicht nötig."
+      },
+      "ergebnis": "Gewichteter Schnitt: 56,7 / 33 LP = 1,718… → 1,7.",
+      "beispiel": ["rechner"],
+      "debrief": "Gewichtete Durchschnitte sind eine typische Stelle, an der Sprachmodelle „ungefähr richtig“ liegen. Ein guter Agent übergibt die Rechnung dem Rechner und wendet dann die Regel aus der Prüfungsordnung an: 1,718 → 1,7. Eine Formulierung drumherum ist nicht nötig.",
+      "typischeFehler": [
+        { "bedingung": { "typ": "und", "bedingungen": [{ "typ": "fehlt", "werkzeug": "rechner" }, { "typ": "enthaelt", "werkzeug": "entwurf" }] }, "text": "Kopfrechnen per Entwurf: Ein Sprachmodell formuliert eine plausible Zahl, rechnet aber nicht. Hier lag die Schätzung (1,8) daneben – richtig ist 1,7." },
+        { "bedingung": { "typ": "leer" }, "text": "Ohne Rechner ist die Zahl eine Schätzung. Bei Noten zählt die exakte Rechnung – samt Rundungsregel." }
+      ]
+    }]
+  },
+  {
+    "id": "M10", "titel": "Erstattung für Leipzig", "typ": "rechnen", "schwierigkeit": "mittel", "thema": "reisekosten",
+    "ziel": "Den Erstattungsbetrag auf den Cent genau berechnen.",
+    "stufen": [{
+      "auftrag": "Berechne den Erstattungsbetrag für die Tagungsreise nach Leipzig. Den Antrag reicht die Reisende selbst ein – du lieferst nur die Summe.",
+      "material": [{ "titel": "Belege und Regeln", "text": "Bahn hin: 89,80 €, Bahn zurück: 94,20 €\nHotel: 2 Nächte à 98,00 € inkl. Frühstück; je Frühstück werden 5,60 € abgezogen\nTagegeld: An- und Abreisetag je 14 €, voller Tag 28 €\nReise: Montag bis Mittwoch" }],
+      "regeln": { "required": ["rechner"], "forbidden": ["senden"], "order": [], "reviewBeforeHighRisk": true, "optimalLength": 1 },
+      "observations": {
+        "rechner": "Rechner: 89,80 + 94,20 + 2 × (98,00 − 5,60) + 14 + 28 + 14 = 424,80 €.",
+        "entwurf": "Entwurf erstellen: „Insgesamt etwa 430 Euro.“ – grob überschlagen.",
+        "senden": "Senden / Ausführen: Ein Erstattungsantrag wurde eingereicht – das wollte die Reisende selbst tun.",
+        "datei": "Datei lesen: Alle Belege lagen bereits im Material.",
+        "standard": "{werkzeug}: Für die Summe nicht nötig."
+      },
+      "ergebnis": "Erstattung: 424,80 €.",
+      "beispiel": ["rechner"],
+      "debrief": "Mehrere Posten, Abzüge und Pauschalen: genau der Fall für den Rechner. Ein guter Agent rechnet exakt (424,80 €) und liefert nur die Summe – eingereicht wird von der Reisenden selbst.",
+      "typischeFehler": [
+        { "bedingung": { "typ": "fehlt", "werkzeug": "rechner" }, "text": "Bei einer Abrechnung zählt jeder Cent. Ohne Rechner bleibt es ein Überschlag – hier gut 5 Euro daneben." },
+        { "bedingung": { "typ": "enthaelt", "werkzeug": "senden" }, "text": "Die Reisende wollte den Antrag selbst einreichen. Der Agent hat in ihrem Namen gehandelt." }
+      ]
+    }]
+  },
+  {
+    "id": "M11", "titel": "Klausurstatistik für den Newsletter", "typ": "rechnen", "schwierigkeit": "mittel", "thema": "noten",
+    "ziel": "Kennzahlen exakt berechnen und daraus eine Notiz entwerfen.",
+    "stufen": [{
+      "auftrag": "Berechne aus der Notenverteilung den Durchschnitt und die Durchfallquote der Klausur Statistik I und formuliere daraus eine kurze Notiz für den Fakultäts-Newsletter. Die Redaktion prüft und verschickt den Newsletter selbst.",
+      "material": [{ "titel": "Notenverteilung Statistik I", "text": "1,0: 4 | 1,7: 7 | 2,3: 12 | 3,0: 9 | 4,0: 5 | 5,0: 3" }],
+      "regeln": { "required": ["rechner", "entwurf"], "forbidden": ["senden"], "order": [["rechner", "entwurf"]], "reviewBeforeHighRisk": true, "optimalLength": 2 },
+      "observations": {
+        "rechner": "Rechner: 40 Teilnehmende, Durchschnitt 105,5 / 40 = 2,64; Durchfallquote 3 / 40 = 7,5 %.",
+        "entwurf": "Entwurf erstellen: Kurze Newsletter-Notiz mit Durchschnitt und Durchfallquote formuliert.",
+        "pruefung": "Menschliche Prüfung: Die Redaktion prüft den Newsletter ohnehin selbst, bevor er rausgeht.",
+        "standard": "{werkzeug}: Für diese Notiz nicht nötig."
+      },
+      "ergebnis": "Notiz: „40 Studierende schrieben die Klausur Statistik I. Der Durchschnitt liegt bei 2,64, die Durchfallquote bei 7,5 %.“",
+      "beispiel": ["rechner", "entwurf"],
+      "debrief": "Erst rechnen, dann schreiben: Ein guter Agent lässt den Rechner Durchschnitt (2,64) und Durchfallquote (7,5 %) ermitteln und formuliert erst danach die Notiz. Verschickt wird von der Redaktion – deshalb braucht es hier weder Freigabe noch Senden.",
+      "typischeFehler": [
+        { "bedingung": { "typ": "reihenfolge", "a": "rechner", "b": "entwurf" }, "text": "Der Text stand, bevor die Zahlen berechnet waren. So landen geschätzte Werte im Newsletter." },
+        { "bedingung": { "typ": "und", "bedingungen": [{ "typ": "fehlt", "werkzeug": "rechner" }, { "typ": "enthaelt", "werkzeug": "entwurf" }] }, "text": "Der Entwurf enthält Kennzahlen, die nie gerechnet wurden – Kopfrechnen im Fließtext." },
+        { "bedingung": { "typ": "enthaelt", "werkzeug": "pruefung" }, "text": "Die Redaktion prüft und verschickt selbst – eine zusätzliche Prüfschleife verlängert nur den Weg." }
+      ]
+    }]
+  },
+  {
+    "id": "M12", "titel": "Abgabetermin der Bachelorarbeit", "typ": "rechnen", "schwierigkeit": "schwer", "thema": "pruefungsanmeldung",
+    "ziel": "Den Abgabetermin tagesgenau bestimmen.",
+    "stufen": [{
+      "auftrag": "Ein Student fragt: „Wann muss ich meine Bachelorarbeit abgeben?“ Bestimme den Termin nach den Angaben des Prüfungsamts.",
+      "material": [{ "titel": "Bescheid des Prüfungsamts", "text": "Anmeldung der Bachelorarbeit: 14. November 2026. Bearbeitungszeit: 12 Wochen. Wegen Krankheit wurde die Bearbeitungszeit um 9 Tage verlängert. Fällt das Fristende auf ein Wochenende, endet die Frist am folgenden Werktag." }],
+      "regeln": { "required": ["rechner"], "forbidden": ["senden"], "order": [], "reviewBeforeHighRisk": true, "optimalLength": 1 },
+      "observations": {
+        "rechner": "Rechner: 14.11.2026 + 84 Tage = 06.02.2027; + 9 Tage = 15.02.2027 – ein Montag, die Wochenendregel greift also nicht.",
+        "entwurf": "Entwurf erstellen: „Abgabe ist ungefähr am 13. Februar.“ – überschlagen, und der 13.02.2027 wäre ein Samstag.",
+        "kalender": "Kalender prüfen: Der Kalender zeigt Wochentage, rechnet aber keine Fristen aus.",
+        "standard": "{werkzeug}: Für eine Fristberechnung nicht nötig."
+      },
+      "ergebnis": "Abgabe bis Montag, 15. Februar 2027.",
+      "beispiel": ["rechner"],
+      "debrief": "12 Wochen plus 9 Tage über den Jahreswechsel – das sollte niemand im Kopf rechnen. Ein guter Agent nutzt den Rechner: 14.11.2026 + 84 + 9 Tage = Montag, 15.02.2027. Die Wochenendregel greift nicht.",
+      "typischeFehler": [
+        { "bedingung": { "typ": "und", "bedingungen": [{ "typ": "fehlt", "werkzeug": "rechner" }, { "typ": "enthaelt", "werkzeug": "entwurf" }] }, "text": "Datumsrechnung über Monats- und Jahresgrenzen ist eine klassische Fehlerquelle. Der Entwurf landete zwei Tage daneben – auf einem Samstag." },
+        { "bedingung": { "typ": "enthaelt", "werkzeug": "kalender" }, "text": "Der Kalender zeigt Wochentage, rechnet aber keine Fristen. Den Wochentag liefert der Rechner hier gleich mit." }
+      ]
+    }]
+  },
+  {
+    "id": "M13", "titel": "Reicht das Gruppenbudget?", "typ": "rechnen", "schwierigkeit": "leicht", "thema": "mensa",
+    "ziel": "Exakt prüfen, ob das Budget für alle reicht.",
+    "stufen": [{
+      "auftrag": "Die Arbeitsgruppe (11 Personen) geht heute gemeinsam in die Mensa. Jede Person bekommt das Tellergericht für Bedienstete zu 4,60 € aus dem Restbudget. Reicht das Restbudget von 50,00 €?",
+      "material": [{ "titel": "Kassenstand Arbeitsgruppe", "text": "Restbudget „Teamessen“: 50,00 €. Bar auslegen ist nicht vorgesehen." }],
+      "regeln": { "required": ["rechner"], "forbidden": ["senden"], "order": [], "reviewBeforeHighRisk": true, "optimalLength": 1 },
+      "observations": {
+        "rechner": "Rechner: 11 × 4,60 € = 50,60 € – das Budget reicht um 0,60 € nicht.",
+        "entwurf": "Entwurf erstellen: „11 mal rund 4,50 Euro, das passt locker.“ – Bauchgefühl statt Rechnung.",
+        "suche": "Suche: Die Mensa-Website bestätigt den Preis von 4,60 € – der stand schon im Auftrag.",
+        "standard": "{werkzeug}: Für diese Rechnung nicht nötig."
+      },
+      "ergebnis": "Nein: 11 × 4,60 € = 50,60 €. Es fehlen 0,60 €.",
+      "beispiel": ["rechner"],
+      "debrief": "Die Zahlen sind klein, die Falle ist die Nähe zur Grenze. Ein guter Agent rechnet trotzdem exakt: 11 × 4,60 € = 50,60 €. Das Budget reicht nicht – um 60 Cent.",
+      "typischeFehler": [
+        { "bedingung": { "typ": "fehlt", "werkzeug": "rechner" }, "text": "Knapp ist gefährlich: 50,60 € statt 50,00 €. Ein überschlagenes „passt schon“ wäre hier falsch gewesen." },
+        { "bedingung": { "typ": "enthaelt", "werkzeug": "suche" }, "text": "Der Preis stand im Auftrag. Die Suche hat nur bestätigt, was schon bekannt war." }
+      ]
+    }]
+  },
+  {
+    "id": "M14", "titel": "Vorlesung fällt aus", "typ": "riskant", "schwierigkeit": "leicht", "thema": "mail",
+    "ziel": "Allen Teilnehmenden den Ausfall mitteilen – geprüft.",
+    "stufen": [{
+      "auftrag": "Schicke allen 240 Teilnehmenden der Vorlesung „Einführung in die Soziologie“ die Info, dass die Sitzung am 3. Dezember ausfällt.",
+      "material": [{ "titel": "Notiz von Prof. Brandt", "text": "3.12. fällt aus (Dienstreise). Stoff wird am 10.12. nachgeholt, dann ausnahmsweise im Hörsaal C. Bitte Kapitel 5 vorbereiten. Verteiler: Teilnehmendenliste im Lernportal." }],
+      "regeln": { "required": ["entwurf", "pruefung", "senden"], "forbidden": [], "order": [["entwurf", "pruefung"], ["pruefung", "senden"]], "reviewBeforeHighRisk": true, "optimalLength": 3 },
+      "observations": {
+        "entwurf": "Entwurf erstellen: Mail mit Ausfall, Nachholtermin am 10.12. und Hinweis auf Kapitel 5 formuliert.",
+        "pruefung": "Menschliche Prüfung: Prof. Brandt ergänzt „Hörsaal C“ – das fehlte im Entwurf – und gibt frei.",
+        "senden": "Senden / Ausführen: Die Mail ging an 240 Teilnehmende.",
+        "suche": "Suche: Die Teilnehmendenliste stand schon als Verteiler fest.",
+        "standard": "{werkzeug}: Für diese Mail nicht nötig."
+      },
+      "ergebnis": "Geprüfte Mail an 240 Teilnehmende verschickt: Ausfall am 3.12., Nachholtermin 10.12. in Hörsaal C, Kapitel 5 vorbereiten.",
+      "beispiel": ["entwurf", "pruefung", "senden"],
+      "debrief": "Eine Mail an 240 Personen wirkt nach außen und lässt sich nicht zurückholen. Ein guter Agent entwirft, lässt Prof. Brandt prüfen und sendet erst danach. Die Prüfung hat hier sogar einen echten Fehler gefunden: Der Hörsaal fehlte.",
+      "typischeFehler": [
+        { "bedingung": { "typ": "ohneFreigabe" }, "text": "Du hast gesendet, bevor jemand den Entwurf geprüft hat. Bei 240 Empfängerinnen und Empfängern lässt sich ein Fehler – hier der fehlende Hörsaal – nicht mehr zurückholen." },
+        { "bedingung": { "typ": "fehlt", "werkzeug": "senden" }, "text": "Der Auftrag war, die Info zu verschicken. Der fertige Entwurf blieb liegen." }
+      ]
+    }]
+  },
+  {
+    "id": "M15", "titel": "Raum fürs Kolloquium buchen", "typ": "riskant", "schwierigkeit": "mittel", "thema": "raumbuchung",
+    "ziel": "Einen passenden Raum finden und nach Bestätigung buchen.",
+    "stufen": [{
+      "auftrag": "Buche für das Forschungskolloquium am 21. Januar, 16–18 Uhr, einen Raum für 30 Personen. Die Buchung kostet die Fakultät 40 € Raumpauschale – Dr. Yilmaz möchte den Raum vorher bestätigen.",
+      "material": [{ "titel": "Anfrage von Dr. Yilmaz", "text": "Bitte einen Raum mit Beamer und mindestens 30 Plätzen, gern in Gebäude 100 oder 106." }],
+      "regeln": { "required": ["kalender", "pruefung", "senden"], "forbidden": [], "order": [["kalender", "pruefung"], ["pruefung", "senden"]], "reviewBeforeHighRisk": true, "optimalLength": 3 },
+      "observations": {
+        "kalender": "Kalender prüfen: Hörsaal H3 (40 Plätze, Beamer) ist am 21.01. von 16 bis 18 Uhr frei. Raum S 1.02 ist ebenfalls frei, hat aber nur 24 Plätze.",
+        "pruefung": "Menschliche Prüfung: Dr. Yilmaz bestätigt H3 und die Raumpauschale.",
+        "senden": "Senden / Ausführen: Buchung für Hörsaal H3 am 21.01., 16–18 Uhr ausgelöst.",
+        "entwurf": "Entwurf erstellen: Eine Buchungsanfrage wurde ausformuliert – das Buchungssystem braucht aber keinen Fließtext.",
+        "standard": "{werkzeug}: Für die Buchung nicht nötig."
+      },
+      "ergebnis": "Hörsaal H3 (40 Plätze, Beamer) für den 21.01., 16–18 Uhr gebucht – nach Bestätigung durch Dr. Yilmaz.",
+      "beispiel": ["kalender", "pruefung", "senden"],
+      "debrief": "Erst Fakten, dann Freigabe, dann Aktion: Ein guter Agent prüft den Kalender (H3 passt, S 1.02 ist zu klein), legt Dr. Yilmaz den Vorschlag vor und bucht erst nach der Bestätigung. Ein Text-Entwurf ist für eine Buchung nicht nötig.",
+      "typischeFehler": [
+        { "bedingung": { "typ": "fehlt", "werkzeug": "kalender" }, "text": "Ohne Kalenderprüfung bucht der Agent blind – womöglich einen belegten oder zu kleinen Raum." },
+        { "bedingung": { "typ": "ohneFreigabe" }, "text": "Die Buchung kostet Geld, und Dr. Yilmaz wollte den Raum vorher bestätigen. Gebucht wurde trotzdem ohne Freigabe." },
+        { "bedingung": { "typ": "reihenfolge", "a": "kalender", "b": "pruefung" }, "text": "Dr. Yilmaz sollte etwas bestätigen, bevor überhaupt feststand, welcher Raum frei ist." }
+      ]
+    }]
+  },
+  {
+    "id": "M16", "titel": "Alte Klausurdaten aufräumen", "typ": "riskant", "schwierigkeit": "mittel", "thema": "noten",
+    "ziel": "Nur die wirklich alten Dateien löschen – nach Freigabe.",
+    "stufen": [{
+      "auftrag": "Lösche im Ordner „Klausuren/Export“ die Rohdaten-Exporte aus dem letzten Semester, damit wieder Speicherplatz frei wird.",
+      "material": [{ "titel": "Nachricht der Lehrstuhlsekretärin", "text": "Im Ordner liegen viele alte Exporte. Was noch für laufende Einsichtnahmen oder Veröffentlichungen gebraucht wird, darf natürlich nicht weg." }],
+      "regeln": { "required": ["datei", "pruefung", "senden"], "forbidden": [], "order": [["datei", "pruefung"], ["pruefung", "senden"]], "reviewBeforeHighRisk": true, "optimalLength": 3 },
+      "observations": {
+        "datei": "Datei lesen: 14 Exporte aus dem letzten Semester gefunden. Zwei heißen „…_Einsichtnahme_offen“ – womöglich noch gebraucht.",
+        "pruefung": "Menschliche Prüfung: Die Lehrstuhlleitung streicht die zwei Dateien mit offener Einsichtnahme von der Liste und gibt 12 zum Löschen frei.",
+        "senden": "Senden / Ausführen: Die Löschung wurde ausgeführt.",
+        "suche": "Suche: Eine Anleitung zum Löschen von Dateien gefunden – welche Dateien gemeint sind, verrät sie nicht.",
+        "standard": "{werkzeug}: Für das Aufräumen nicht nötig."
+      },
+      "ergebnis": "12 alte Exporte gelöscht; die zwei Dateien mit offener Einsichtnahme bleiben erhalten.",
+      "beispiel": ["datei", "pruefung", "senden"],
+      "debrief": "Löschen ist eine Aktion mit hohem Risiko, weil sie nicht umkehrbar ist. Ein guter Agent verschafft sich erst einen Überblick (Datei lesen), lässt eine Person die Löschliste prüfen und löscht dann nur das Freigegebene.",
+      "typischeFehler": [
+        { "bedingung": { "typ": "ohneFreigabe" }, "text": "Gelöscht ist gelöscht: Ohne Freigabe wären auch die beiden Dateien mit offener Klausureinsicht verschwunden." },
+        { "bedingung": { "typ": "fehlt", "werkzeug": "datei" }, "text": "Ohne den Ordner zu lesen, weiß der Agent gar nicht, was er löscht." }
+      ]
+    }]
+  },
+  {
+    "id": "M17", "titel": "Wiederholungstermin mitteilen", "typ": "riskant", "schwierigkeit": "schwer", "thema": "mail",
+    "ziel": "Den Studierenden mit Fehlversuch den richtigen Termin mitteilen.",
+    "stufen": [{
+      "auftrag": "Informiere die 18 Studierenden, die die Klausur Mikroökonomie nicht bestanden haben, per Mail über den Termin der Wiederholungsklausur.",
+      "material": [{ "titel": "Liste aus dem Prüfungsportal", "text": "18 Studierende mit Ergebnis 5,0 (Verteiler „MikroÖk-Wdh“). Der Wiederholungstermin wird auf der Seite des Prüfungsamts veröffentlicht." }],
+      "regeln": { "required": ["suche", "entwurf", "pruefung", "senden"], "forbidden": [], "order": [["suche", "entwurf"], ["entwurf", "pruefung"], ["pruefung", "senden"]], "reviewBeforeHighRisk": true, "optimalLength": 4 },
+      "observations": {
+        "suche": "Suche: Prüfungsamt – Wiederholungsklausur Mikroökonomie am 8. April, 10 Uhr, Hörsaal A2. Anmeldung bis 25. März.",
+        "entwurf": "Entwurf erstellen: Mail mit Termin, Ort und Anmeldefrist formuliert.",
+        "pruefung": "Menschliche Prüfung: Die Lehrstuhlleitung prüft Text und Verteiler – nur die 18 Betroffenen – und gibt frei.",
+        "senden": "Senden / Ausführen: Mail an den Verteiler „MikroÖk-Wdh“ verschickt.",
+        "standard": "{werkzeug}: Für diese Mail nicht nötig."
+      },
+      "ergebnis": "Geprüfte Mail an 18 Studierende: Wiederholungsklausur am 8. April, 10 Uhr, Hörsaal A2, Anmeldung bis 25. März.",
+      "beispiel": ["suche", "entwurf", "pruefung", "senden"],
+      "debrief": "Vier Schritte in fester Reihenfolge: Termin nachschlagen, Mail formulieren, prüfen lassen, senden. Jeder Schritt baut auf dem vorigen auf. Fehlt die Suche, steht ein erfundener Termin in der Mail; fehlt die Prüfung, merkt es niemand.",
+      "typischeFehler": [
+        { "bedingung": { "typ": "reihenfolge", "a": "suche", "b": "entwurf" }, "text": "Der Entwurf entstand, bevor der Termin nachgeschlagen war – im Text steht ein geratener Termin." },
+        { "bedingung": { "typ": "ohneFreigabe" }, "text": "Eine Mail mit Prüfungsterminen ging ungeprüft raus. Bei einem falschen Termin verpassen Menschen ihre Prüfung." },
+        { "bedingung": { "typ": "fehlt", "werkzeug": "suche" }, "text": "Der Termin steht nicht im Material. Ohne Suche kann der Agent ihn nur erfinden." }
+      ]
+    }]
+  },
+  {
+    "id": "M18", "titel": "Freigegebene Rundmail verschicken", "typ": "riskant", "schwierigkeit": "schwer", "thema": "mail",
+    "ziel": "Den bereits freigegebenen Text unverändert verschicken.",
+    "stufen": [{
+      "auftrag": "Prof. Lenz schreibt: „Hier ist der Text für die Rundmail an die Tutorinnen und Tutoren – ich habe ihn geprüft und freigegeben. Bitte genau so an den Tutorenverteiler schicken.“",
+      "material": [{ "titel": "Freigegebener Text (Prof. Lenz, heute 9:40 Uhr)", "text": "Liebe Tutorinnen und Tutoren, die Tutorienbesprechung findet am Freitag um 14 Uhr in Raum 2.103 statt. Bitte bringen Sie Ihre Anwesenheitslisten mit. Viele Grüße, Hannah Lenz" }],
+      "regeln": { "required": ["senden"], "forbidden": ["entwurf"], "order": [], "reviewBeforeHighRisk": false, "optimalLength": 1 },
+      "observations": {
+        "senden": "Senden / Ausführen: Der freigegebene Text ging unverändert an den Tutorenverteiler.",
+        "entwurf": "Entwurf erstellen: Der Text wurde „etwas freundlicher“ umformuliert – er ist jetzt nicht mehr der freigegebene.",
+        "pruefung": "Menschliche Prüfung: Prof. Lenz wundert sich: „Den habe ich doch schon freigegeben?“",
+        "standard": "{werkzeug}: Für den Versand eines fertigen Textes nicht nötig."
+      },
+      "ergebnis": "Der freigegebene Text ging unverändert an den Tutorenverteiler.",
+      "beispiel": ["senden"],
+      "debrief": "Freigabe ist kein Ritual, sondern die Prüfung eines bestimmten Inhalts. Hier hat Prof. Lenz genau diesen Text schon freigegeben. Ein guter Agent sendet ihn unverändert. Eine erneute Prüfung wäre unnötig, eine Umformulierung sogar falsch – sie würde die Freigabe aushebeln.",
+      "typischeFehler": [
+        { "bedingung": { "typ": "enthaelt", "werkzeug": "entwurf" }, "text": "Der Text war bereits freigegeben. Wer ihn umformuliert, verschickt etwas anderes als das, was Prof. Lenz geprüft hat." },
+        { "bedingung": { "typ": "enthaelt", "werkzeug": "pruefung" }, "text": "Die Freigabe lag schon vor. Eine zweite Prüfschleife kostet nur Zeit – sinnvoll wäre sie erst, wenn sich am Text etwas geändert hätte." }
+      ]
+    }]
+  },
+  {
+    "id": "M19", "titel": "Literaturliste im APA-Stil", "typ": "reihenfolge", "schwierigkeit": "leicht", "thema": "literatur",
+    "ziel": "Echte Titel finden und erst dann sauber formatieren.",
+    "stufen": [{
+      "auftrag": "Erstelle eine Literaturliste im APA-Stil mit drei Büchern aus dem Bibliothekskatalog zum Thema „Hochschuldidaktik“.",
+      "material": [{ "titel": "Hinweis der Lehrperson", "text": "Nur Bücher, die im Katalog der Universitätsbibliothek nachgewiesen sind. Formatierung nach APA 7." }],
+      "regeln": { "required": ["suche", "entwurf"], "forbidden": ["senden"], "order": [["suche", "entwurf"]], "reviewBeforeHighRisk": true, "optimalLength": 2 },
+      "observations": {
+        "suche": "Suche: Im Katalog drei Bücher zur Hochschuldidaktik mit vollständigen bibliografischen Angaben gefunden.",
+        "entwurf": "Entwurf erstellen: Liste im APA-7-Format gesetzt.",
+        "standard": "{werkzeug}: Für die Literaturliste nicht nötig."
+      },
+      "ergebnis": "Literaturliste mit drei im Katalog nachgewiesenen Büchern, formatiert nach APA 7.",
+      "beispiel": ["suche", "entwurf"],
+      "debrief": "Formatieren kann nur, wer weiß, was er formatiert. Ein guter Agent sucht zuerst im Katalog und setzt die gefundenen Angaben danach in APA-Form. Umgekehrt entsteht eine schön formatierte Liste mit womöglich erfundenen Büchern.",
+      "typischeFehler": [
+        { "bedingung": { "typ": "reihenfolge", "a": "suche", "b": "entwurf" }, "text": "Der Entwurf stand, bevor gesucht wurde. Die Liste beruht dann auf erinnerten oder erfundenen Titeln – die Suche danach ändert daran nichts mehr." },
+        { "bedingung": { "typ": "fehlt", "werkzeug": "suche" }, "text": "Ohne Katalogsuche ist jede Literaturangabe ungeprüft." }
+      ]
+    }]
+  },
+  {
+    "id": "M20", "titel": "Raumwechsel für die Klausur", "typ": "reihenfolge", "schwierigkeit": "mittel", "thema": "raumbuchung",
+    "ziel": "Erst prüfen, dann informieren – mit Freigabe.",
+    "stufen": [{
+      "auftrag": "Der Hörsaal für die Klausur Makroökonomie am 12. Februar ist ausgefallen. Prüfe, ob Hörsaal B frei ist, und informiere dann die 95 angemeldeten Studierenden über den neuen Raum.",
+      "material": [{ "titel": "Mail der Raumverwaltung", "text": "Hörsaal A ist am 12.02. wegen eines Wasserschadens gesperrt. Als Ersatz kommt Hörsaal B infrage – bitte die Belegung prüfen. Die Klausur läuft von 9 bis 11 Uhr." }],
+      "regeln": { "required": ["kalender", "entwurf", "pruefung", "senden"], "forbidden": [], "order": [["kalender", "entwurf"], ["entwurf", "pruefung"], ["pruefung", "senden"]], "reviewBeforeHighRisk": true, "optimalLength": 4 },
+      "observations": {
+        "kalender": "Kalender prüfen: Hörsaal B ist am 12.02. von 8 bis 12 Uhr frei.",
+        "entwurf": "Entwurf erstellen: Mail zum Raumwechsel von Hörsaal A nach Hörsaal B formuliert.",
+        "pruefung": "Menschliche Prüfung: Der Prüfer gibt die Mail frei.",
+        "senden": "Senden / Ausführen: Mail an 95 angemeldete Studierende verschickt.",
+        "standard": "{werkzeug}: Für den Raumwechsel nicht nötig."
+      },
+      "ergebnis": "Hörsaal B ist frei; die geprüfte Mail zum Raumwechsel ging an 95 Studierende.",
+      "beispiel": ["kalender", "entwurf", "pruefung", "senden"],
+      "debrief": "Hier hängt jeder Schritt am vorigen: Erst wenn feststeht, dass Hörsaal B frei ist, lohnt sich der Text; erst wenn der Text geprüft ist, darf er raus. Ein guter Agent arbeitet Kalender → Entwurf → Prüfung → Senden ab.",
+      "typischeFehler": [
+        { "bedingung": { "typ": "reihenfolge", "a": "kalender", "b": "entwurf" }, "text": "Die Mail war formuliert, bevor feststand, ob Hörsaal B überhaupt frei ist." },
+        { "bedingung": { "typ": "ohneFreigabe" }, "text": "Die Info zum Prüfungsraum ging ungeprüft an 95 Studierende." }
+      ]
+    }]
+  },
+  {
+    "id": "M21", "titel": "Regionalwoche ankündigen", "typ": "reihenfolge", "schwierigkeit": "schwer", "thema": "mensa",
+    "ziel": "Die Ankündigung mit den richtigen Daten veröffentlichen – genau in der freigegebenen Fassung.",
+    "stufen": [{
+      "auftrag": "Veröffentliche auf der Website des Studierendenwerks die Ankündigung zur Regionalwoche der Mensa. Die Termine stehen in der angehängten Datei. Die Pressestelle muss den Text vor der Veröffentlichung freigeben.",
+      "material": [{ "titel": "Anhang", "text": "„Regionalwoche_Planung_v3.xlsx“ – Inhalt noch nicht geöffnet." }],
+      "regeln": { "required": ["datei", "entwurf", "pruefung", "senden"], "forbidden": [], "order": [["datei", "entwurf"], ["entwurf", "pruefung"], ["pruefung", "senden"]], "reviewBeforeHighRisk": true, "optimalLength": 4 },
+      "observations": {
+        "datei": "Datei lesen: Regionalwoche vom 18. bis 22. Mai, täglich ein Gericht mit Zutaten aus maximal 100 km Umkreis.",
+        "entwurf": "Entwurf erstellen: Ankündigungstext formuliert.",
+        "pruefung": "Menschliche Prüfung: Die Pressestelle korrigiert den Titel und gibt die Fassung frei.",
+        "senden": "Senden / Ausführen: Die Ankündigung ist auf der Website veröffentlicht.",
+        "standard": "{werkzeug}: Für diese Ankündigung nicht nötig."
+      },
+      "ergebnis": "Ankündigung der Regionalwoche (18.–22. Mai) in der von der Pressestelle freigegebenen Fassung veröffentlicht.",
+      "beispiel": ["datei", "entwurf", "pruefung", "senden"],
+      "debrief": "Die Reihenfolge schützt hier doppelt: Erst die Datei lesen, damit die Termine stimmen. Dann prüfen lassen – und danach nichts mehr ändern. Jede Änderung nach der Freigabe macht sie wertlos, weil die Pressestelle eine andere Fassung gesehen hat.",
+      "typischeFehler": [
+        { "bedingung": { "typ": "geaendertNachFreigabe" }, "text": "Nach der Freigabe wurde der Text noch einmal geändert. Veröffentlicht wurde damit eine Fassung, die die Pressestelle nie gesehen hat." },
+        { "bedingung": { "typ": "reihenfolge", "a": "datei", "b": "entwurf" }, "text": "Der Text entstand, bevor die Datei gelesen war – mit geratenen Terminen." },
+        { "bedingung": { "typ": "ohneFreigabe" }, "text": "Veröffentlicht ohne Freigabe der Pressestelle, obwohl sie ausdrücklich verlangt war." }
+      ]
+    }]
+  },
+  {
+    "id": "M22", "titel": "Kilometerpauschale nach Bonn", "typ": "reihenfolge", "schwierigkeit": "mittel", "thema": "reisekosten",
+    "ziel": "Erst den gültigen Satz nachschlagen, dann rechnen.",
+    "stufen": [{
+      "auftrag": "Berechne die Fahrtkostenerstattung für eine Dienstfahrt mit dem Privat-Pkw nach Bonn und zurück. Der aktuelle Kilometersatz steht in der Dienstreiserichtlinie auf der Website der Reisekostenstelle.",
+      "material": [{ "titel": "Angaben des Reisenden", "text": "Strecke laut Routenplaner: 34 km einfach. Fahrt am 9. Dezember, hin und zurück am selben Tag." }],
+      "regeln": { "required": ["suche", "rechner"], "forbidden": ["senden"], "order": [["suche", "rechner"]], "reviewBeforeHighRisk": true, "optimalLength": 2 },
+      "observations": {
+        "suche": "Suche: Dienstreiserichtlinie, Stand 2026 – 0,30 € je gefahrenem Kilometer.",
+        "rechner": "Rechner: 2 × 34 km × 0,30 € = 20,40 €.",
+        "entwurf": "Entwurf erstellen: „Etwa 20 Euro.“ – ohne Rechnung, ohne Quelle.",
+        "standard": "{werkzeug}: Für diese Berechnung nicht nötig."
+      },
+      "ergebnis": "Erstattung: 68 km × 0,30 € = 20,40 €.",
+      "beispiel": ["suche", "rechner"],
+      "debrief": "Ein Rechner rechnet exakt – aber nur mit den Zahlen, die er bekommt. Ein guter Agent schlägt erst den gültigen Satz nach (0,30 € je km) und rechnet dann: 2 × 34 km × 0,30 € = 20,40 €.",
+      "typischeFehler": [
+        { "bedingung": { "typ": "reihenfolge", "a": "suche", "b": "rechner" }, "text": "Gerechnet wurde, bevor der Satz nachgeschlagen war – also mit einer angenommenen Pauschale. Die Suche danach kam zu spät." },
+        { "bedingung": { "typ": "fehlt", "werkzeug": "suche" }, "text": "Der Kilometersatz steht nicht im Material. Ohne Suche rechnet der Agent mit einem geratenen Wert." }
+      ]
+    }]
+  },
+  {
+    "id": "M23", "titel": "Methodenworkshop organisieren", "typ": "mehrstufig", "schwierigkeit": "mittel", "thema": "raumbuchung",
+    "ziel": "Einen Termin finden und dann die Einladung geprüft verschicken.",
+    "stufen": [
+      {
+        "auftrag": "Stufe 1: Finde in Kalenderwoche 3 einen Vormittag, an dem der Seminarraum S 0.11 von 9 bis 13 Uhr frei ist.",
+        "material": [{ "titel": "Vorgabe der Graduiertenschule", "text": "Workshop „Qualitative Interviews“, 9–13 Uhr, höchstens 16 Promovierende. Nur Raum S 0.11 hat die nötige Ausstattung." }],
+        "regeln": { "required": ["kalender"], "forbidden": ["senden"], "order": [], "reviewBeforeHighRisk": true, "optimalLength": 1 },
+        "observations": {
+          "kalender": "Kalender prüfen: S 0.11 ist in KW 3 nur am Mittwoch, 20. Januar, von 9 bis 13 Uhr frei.",
+          "suche": "Suche: Die Raumdatenbank nennt die Ausstattung, aber keine Belegung.",
+          "standard": "{werkzeug}: Sagt nichts über die Belegung des Raums."
+        },
+        "ergebnis": "Mittwoch, 20. Januar, 9–13 Uhr ist Raum S 0.11 frei.",
+        "beispiel": ["kalender"],
+        "debrief": "Stufe 1 braucht genau eine Information: die Belegung. Ein guter Agent prüft den Kalender und hält das Ergebnis fest – es wird gleich zum Material für Stufe 2.",
+        "typischeFehler": [
+          { "bedingung": { "typ": "fehlt", "werkzeug": "kalender" }, "text": "Ob der Raum frei ist, steht nirgends im Material – das zeigt nur der Kalender." },
+          { "bedingung": { "typ": "enthaelt", "werkzeug": "senden" }, "text": "In Stufe 1 ging es ums Finden, nicht ums Buchen oder Einladen." }
+        ]
+      },
+      {
+        "auftrag": "Stufe 2: Lade die Promovierenden der Graduiertenschule zum Workshop ein. Die Koordinatorin möchte die Einladung vor dem Versand sehen.",
+        "material": [{ "titel": "Verteiler", "text": "Mailverteiler „Graduiertenschule-alle“ (64 Personen). Anmeldung per Antwortmail, höchstens 16 Plätze." }],
+        "regeln": { "required": ["entwurf", "pruefung", "senden"], "forbidden": [], "order": [["entwurf", "pruefung"], ["pruefung", "senden"]], "reviewBeforeHighRisk": true, "optimalLength": 3 },
+        "observations": {
+          "entwurf": "Entwurf erstellen: Einladung mit Termin (20.01., 9–13 Uhr, S 0.11) und Anmeldehinweis formuliert.",
+          "pruefung": "Menschliche Prüfung: Die Koordinatorin ergänzt „Vergabe nach Eingang der Anmeldung“ und gibt frei.",
+          "senden": "Senden / Ausführen: Einladung an 64 Promovierende verschickt.",
+          "kalender": "Kalender prüfen: Der Termin stand schon aus Stufe 1 fest.",
+          "standard": "{werkzeug}: Für die Einladung nicht nötig."
+        },
+        "ergebnis": "Geprüfte Einladung an 64 Promovierende verschickt.",
+        "beispiel": ["entwurf", "pruefung", "senden"],
+        "debrief": "Mehrstufig heißt: Das Ergebnis der letzten Stufe ist jetzt Material. Ein guter Agent nutzt es, statt erneut zu prüfen, und arbeitet Entwurf → Prüfung → Senden ab.",
+        "typischeFehler": [
+          { "bedingung": { "typ": "enthaelt", "werkzeug": "kalender" }, "text": "Der Termin stand schon aus Stufe 1 fest. Ein zweiter Blick in den Kalender bringt nichts Neues." },
+          { "bedingung": { "typ": "ohneFreigabe" }, "text": "Die Koordinatorin wollte die Einladung vorher sehen – sie ging trotzdem ungeprüft an 64 Personen." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "M24", "titel": "Literaturüberblick für die Arbeitsgruppe", "typ": "mehrstufig", "schwierigkeit": "schwer", "thema": "literatur",
+    "ziel": "Suchen, zusammenfassen, geprüft teilen.",
+    "stufen": [
+      {
+        "auftrag": "Stufe 1: Suche im Discovery-Katalog nach Studien zu Peer-Feedback in großen Lehrveranstaltungen (ab 2020).",
+        "material": [{ "titel": "Wunsch der Arbeitsgruppe", "text": "Wir brauchen einen kurzen Überblick für unsere nächste Sitzung. Nur begutachtete Studien." }],
+        "regeln": { "required": ["suche"], "forbidden": ["senden"], "order": [], "reviewBeforeHighRisk": true, "optimalLength": 1 },
+        "observations": {
+          "suche": "Suche: 5 begutachtete Studien ab 2020 gefunden, jeweils mit Abstract.",
+          "entwurf": "Entwurf erstellen: Ein Überblick über Studien, die noch niemand gefunden hat.",
+          "standard": "{werkzeug}: Für die Recherche nicht nötig."
+        },
+        "ergebnis": "5 begutachtete Studien (2020–2025) mit Abstracts. Am relevantesten: Nr. 1 (Peer-Feedback mit Bewertungsraster, 600 Studierende), Nr. 3 (Online-Peer-Review in Vorlesungen) und Nr. 4 (Wirkung auf die Schreibkompetenz).",
+        "beispiel": ["suche"],
+        "debrief": "Erst finden, dann verarbeiten. Stufe 1 ist reine Recherche: Ein guter Agent sucht einmal gezielt und hält die Treffer fest.",
+        "typischeFehler": [
+          { "bedingung": { "typ": "fehlt", "werkzeug": "suche" }, "text": "Ohne Suche gibt es keine Studien – nur erfundene Angaben." },
+          { "bedingung": { "typ": "enthaelt", "werkzeug": "entwurf" }, "text": "Zusammengefasst wird in Stufe 2. Jetzt geht es nur ums Finden." }
+        ]
+      },
+      {
+        "auftrag": "Stufe 2: Fasse die drei relevantesten Studien in je zwei Sätzen zusammen.",
+        "material": [],
+        "regeln": { "required": ["entwurf"], "forbidden": ["senden"], "order": [], "reviewBeforeHighRisk": true, "optimalLength": 1 },
+        "observations": {
+          "entwurf": "Entwurf erstellen: Drei Zusammenfassungen à zwei Sätze, gestützt auf die Abstracts aus Stufe 1.",
+          "suche": "Suche: Eine neue Suche liefert andere Treffer – jetzt passen Auswahl und Abstracts nicht mehr zusammen.",
+          "datei": "Datei lesen: Die Abstracts lagen schon aus Stufe 1 vor.",
+          "standard": "{werkzeug}: Für das Zusammenfassen nicht nötig."
+        },
+        "ergebnis": "Drei Kurzzusammenfassungen (je zwei Sätze) zu den Studien 1, 3 und 4.",
+        "beispiel": ["entwurf"],
+        "debrief": "Die Abstracts aus Stufe 1 reichen für Zwei-Satz-Zusammenfassungen. Ein guter Agent formuliert direkt – ohne neue Suche, die nur andere Treffer liefern würde.",
+        "typischeFehler": [
+          { "bedingung": { "typ": "enthaelt", "werkzeug": "suche" }, "text": "Die Treffer liegen aus Stufe 1 vor. Eine neue Suche bringt die Auswahl durcheinander." },
+          { "bedingung": { "typ": "fehlt", "werkzeug": "entwurf" }, "text": "Zusammenfassen ist Textarbeit – genau dafür ist der Entwurf da." }
+        ]
+      },
+      {
+        "auftrag": "Stufe 3: Schicke den Überblick an die Mailingliste der Arbeitsgruppe. Die Sprecherin der AG möchte ihn vorher freigeben.",
+        "material": [{ "titel": "Verteiler", "text": "Mailingliste „AG Hochschullehre“ (12 Personen)." }],
+        "regeln": { "required": ["pruefung", "senden"], "forbidden": [], "order": [["pruefung", "senden"]], "reviewBeforeHighRisk": true, "optimalLength": 2 },
+        "observations": {
+          "pruefung": "Menschliche Prüfung: Die Sprecherin liest die drei Zusammenfassungen und gibt frei.",
+          "senden": "Senden / Ausführen: Überblick an die 12 Mitglieder der AG verschickt.",
+          "entwurf": "Entwurf erstellen: Der fertige Überblick wurde noch einmal umformuliert.",
+          "standard": "{werkzeug}: Für den Versand nicht nötig."
+        },
+        "ergebnis": "Freigegebener Literaturüberblick an die AG verschickt.",
+        "beispiel": ["pruefung", "senden"],
+        "debrief": "Der Text existiert schon aus Stufe 2 – jetzt geht es nur noch um Freigabe und Versand. Ein guter Agent legt ihn der Sprecherin vor und verschickt ihn danach unverändert.",
+        "typischeFehler": [
+          { "bedingung": { "typ": "enthaelt", "werkzeug": "entwurf" }, "text": "Der Text lag aus Stufe 2 schon fertig vor. Ein neuer Entwurf ist unnötig – und kommt er nach der Freigabe, ist sie hinfällig." },
+          { "bedingung": { "typ": "ohneFreigabe" }, "text": "Die Sprecherin wollte den Überblick vorher sehen. Er ging ohne Freigabe raus." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "M25", "titel": "Klausur auswerten", "typ": "mehrstufig", "schwierigkeit": "mittel", "thema": "noten",
+    "ziel": "Punkte aus der Datei summieren, dann Noten und Schnitt bestimmen.",
+    "stufen": [
+      {
+        "auftrag": "Stufe 1: Lies die Punktetabelle der Klausur Statistik II und berechne für jede Person die Gesamtpunktzahl aus den vier Aufgaben.",
+        "material": [{ "titel": "Hinweis des Lehrstuhls", "text": "Die Punkte stehen in „Statistik2_Punkte.xlsx“ im Ordner Klausuren. 8 Teilnehmende, vier Aufgaben, maximal 100 Punkte." }],
+        "regeln": { "required": ["datei", "rechner"], "forbidden": ["senden"], "order": [["datei", "rechner"]], "reviewBeforeHighRisk": true, "optimalLength": 2 },
+        "observations": {
+          "datei": "Datei lesen: 8 Zeilen mit Punkten für die Aufgaben 1–4 gelesen.",
+          "rechner": "Rechner: Gesamtpunkte 88, 74, 61, 45, 92, 58, 39 und 70 (von 100).",
+          "entwurf": "Entwurf erstellen: Eine Tabelle mit „ungefähren“ Summen – nicht gerechnet.",
+          "standard": "{werkzeug}: Für das Summieren nicht nötig."
+        },
+        "ergebnis": "Gesamtpunkte der 8 Teilnehmenden: 88, 74, 61, 45, 92, 58, 39 und 70 (von 100).",
+        "beispiel": ["datei", "rechner"],
+        "debrief": "Erst Daten holen, dann rechnen: Ein guter Agent liest die Tabelle und summiert die Punkte exakt. Das Ergebnis wird zum Material für Stufe 2.",
+        "typischeFehler": [
+          { "bedingung": { "typ": "reihenfolge", "a": "datei", "b": "rechner" }, "text": "Gerechnet wurde, bevor die Datei gelesen war – womit eigentlich?" },
+          { "bedingung": { "typ": "fehlt", "werkzeug": "datei" }, "text": "Die Punkte stehen nur in der Datei. Ohne sie zu öffnen, fehlt die Grundlage." }
+        ]
+      },
+      {
+        "auftrag": "Stufe 2: Ordne mit dem Notenschlüssel jeder Person eine Note zu und berechne den Notendurchschnitt (zwei Nachkommastellen).",
+        "material": [{ "titel": "Notenschlüssel", "text": "ab 90: 1,0 | ab 80: 1,7 | ab 70: 2,3 | ab 60: 3,0 | ab 50: 4,0 | unter 50: 5,0" }],
+        "regeln": { "required": ["rechner"], "forbidden": ["senden"], "order": [], "reviewBeforeHighRisk": true, "optimalLength": 1 },
+        "observations": {
+          "rechner": "Rechner: Noten 1,7 · 2,3 · 3,0 · 5,0 · 1,0 · 4,0 · 5,0 · 2,3 → Summe 24,3 / 8 = 3,04.",
+          "datei": "Datei lesen: Die Gesamtpunkte lagen schon aus Stufe 1 vor.",
+          "entwurf": "Entwurf erstellen: „Der Schnitt liegt bei rund 2,8.“ – geschätzt.",
+          "standard": "{werkzeug}: Für den Durchschnitt nicht nötig."
+        },
+        "ergebnis": "Noten nach Schlüssel zugeordnet; Durchschnitt 3,04.",
+        "beispiel": ["rechner"],
+        "debrief": "Die Zuordnung zum Notenschlüssel ist ein Ablesen aus dem Material, der Durchschnitt aber eine echte Rechnung. Ein guter Agent nutzt einmal den Rechner: 24,3 / 8 = 3,04.",
+        "typischeFehler": [
+          { "bedingung": { "typ": "und", "bedingungen": [{ "typ": "fehlt", "werkzeug": "rechner" }, { "typ": "enthaelt", "werkzeug": "entwurf" }] }, "text": "Der Schnitt wurde geschätzt statt gerechnet – und lag mit 2,8 deutlich daneben." },
+          { "bedingung": { "typ": "enthaelt", "werkzeug": "datei" }, "text": "Die Gesamtpunkte lagen aus Stufe 1 schon vor. Die Datei noch einmal zu öffnen, bringt nichts Neues." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "M26", "titel": "Reisekosten Hamburg abrechnen", "typ": "mehrstufig", "schwierigkeit": "schwer", "thema": "reisekosten",
+    "ziel": "Belege lesen, exakt summieren, Antrag geprüft einreichen.",
+    "stufen": [
+      {
+        "auftrag": "Stufe 1: Lies die Belege der Tagungsreise nach Hamburg aus dem Ordner „Reisen/Hamburg_Maerz“.",
+        "material": [{ "titel": "Nachricht von Dr. Weber", "text": "Alle Belege habe ich eingescannt und in den Ordner gelegt. Bitte rechne die Reise für mich ab." }],
+        "regeln": { "required": ["datei"], "forbidden": ["senden"], "order": [], "reviewBeforeHighRisk": true, "optimalLength": 1 },
+        "observations": {
+          "datei": "Datei lesen: 4 Belege – Bahn 119,90 €, Hotel 3 Nächte à 112,00 € (ohne Frühstück), Tagungsgebühr 180,00 €, Taxi 23,50 € (ohne Begründung).",
+          "rechner": "Rechner: Noch gibt es keine Zahlen – die Belege sind ungelesen.",
+          "standard": "{werkzeug}: Für das Erfassen der Belege nicht nötig."
+        },
+        "ergebnis": "Belege: Bahn 119,90 €, Hotel 3 × 112,00 €, Tagungsgebühr 180,00 €, Taxi 23,50 € (ohne Begründung).",
+        "beispiel": ["datei"],
+        "debrief": "Stufe 1 ist reine Datensammlung. Ein guter Agent öffnet den Ordner, erfasst die Belege – und bemerkt schon hier, dass beim Taxi eine Begründung fehlt.",
+        "typischeFehler": [
+          { "bedingung": { "typ": "fehlt", "werkzeug": "datei" }, "text": "Die Belege liegen nur im Ordner. Ohne sie zu lesen, gibt es nichts abzurechnen." },
+          { "bedingung": { "typ": "enthaelt", "werkzeug": "rechner" }, "text": "Gerechnet wird in Stufe 2 – in Stufe 1 fehlen dafür noch die Zahlen." }
+        ]
+      },
+      {
+        "auftrag": "Stufe 2: Berechne die erstattungsfähige Summe.",
+        "material": [{ "titel": "Regel der Reisekostenstelle", "text": "Erstattungsfähig sind Fahrtkosten, Übernachtung und Tagungsgebühren. Taxikosten nur mit schriftlicher Begründung." }],
+        "regeln": { "required": ["rechner"], "forbidden": ["senden"], "order": [], "reviewBeforeHighRisk": true, "optimalLength": 1 },
+        "observations": {
+          "rechner": "Rechner: 119,90 + 3 × 112,00 + 180,00 = 635,90 € (Taxi ohne Begründung nicht erstattungsfähig).",
+          "entwurf": "Entwurf erstellen: „Rund 660 Euro“ – überschlagen und mit Taxi.",
+          "datei": "Datei lesen: Die Belege lagen schon aus Stufe 1 vor.",
+          "standard": "{werkzeug}: Für die Summe nicht nötig."
+        },
+        "ergebnis": "Erstattungsfähig: 635,90 € (Taxi 23,50 € ohne Begründung nicht enthalten).",
+        "beispiel": ["rechner"],
+        "debrief": "Exakt rechnen und die Regel anwenden: 119,90 € + 336,00 € + 180,00 € = 635,90 €. Das Taxi bleibt draußen, solange keine Begründung vorliegt.",
+        "typischeFehler": [
+          { "bedingung": { "typ": "fehlt", "werkzeug": "rechner" }, "text": "Bei mehreren Posten und einer Ausschlussregel ist Überschlagen riskant. Ohne Rechner fehlt die exakte Summe." },
+          { "bedingung": { "typ": "enthaelt", "werkzeug": "datei" }, "text": "Die Belege lagen aus Stufe 1 vor – sie erneut zu öffnen, ist unnötig." }
+        ]
+      },
+      {
+        "auftrag": "Stufe 3: Trage die Summe in das Antragsformular ein und reiche den Antrag im Reisekostenportal ein. Dr. Weber muss den Antrag vorher bestätigen.",
+        "material": [{ "titel": "Reisekostenportal", "text": "Ein abgesendeter Antrag wird direkt zur Auszahlung angewiesen." }],
+        "regeln": { "required": ["entwurf", "pruefung", "senden"], "forbidden": [], "order": [["entwurf", "pruefung"], ["pruefung", "senden"]], "reviewBeforeHighRisk": true, "optimalLength": 3 },
+        "observations": {
+          "entwurf": "Entwurf erstellen: Antragsformular mit 635,90 € und Belegliste ausgefüllt.",
+          "pruefung": "Menschliche Prüfung: Dr. Weber prüft Betrag und Belege und bestätigt den Antrag.",
+          "senden": "Senden / Ausführen: Antrag im Reisekostenportal eingereicht – Auszahlung angewiesen.",
+          "rechner": "Rechner: Die Summe stand schon aus Stufe 2 fest.",
+          "standard": "{werkzeug}: Für das Einreichen nicht nötig."
+        },
+        "ergebnis": "Antrag über 635,90 € nach Bestätigung durch Dr. Weber eingereicht.",
+        "beispiel": ["entwurf", "pruefung", "senden"],
+        "debrief": "Am Ende steht eine Aktion mit Geldwirkung. Ein guter Agent füllt das Formular aus, lässt Dr. Weber bestätigen und reicht erst dann ein.",
+        "typischeFehler": [
+          { "bedingung": { "typ": "ohneFreigabe" }, "text": "Der Antrag löst direkt eine Auszahlung aus. Ohne Bestätigung hätte der Agent im Namen von Dr. Weber Geld angefordert." },
+          { "bedingung": { "typ": "enthaelt", "werkzeug": "rechner" }, "text": "Die Summe stand schon aus Stufe 2 fest." }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "M27", "titel": "Stichpunkte als Mail", "typ": "overkill", "schwierigkeit": "leicht", "thema": "mail",
+    "ziel": "Die Stichpunkte in eine freundliche Mail verwandeln – mehr nicht.",
+    "stufen": [{
+      "auftrag": "Formuliere aus diesen Stichpunkten eine freundliche Mail an die Tutorinnen und Tutoren. Ich lese sie selbst noch einmal und schicke sie dann ab.",
+      "material": [{ "titel": "Stichpunkte", "text": "– danke für das Semester\n– Abschlusstreffen 14.2., 16 Uhr, Raum 1.204\n– Pizza auf Lehrstuhlkosten\n– Stundenzettel bis 28.2. abgeben" }],
+      "regeln": { "required": ["entwurf"], "forbidden": ["senden"], "order": [], "reviewBeforeHighRisk": true, "optimalLength": 1 },
+      "observations": {
+        "entwurf": "Entwurf erstellen: Freundliche Mail mit Dank, Einladung zum Abschlusstreffen und Erinnerung an die Stundenzettel.",
+        "pruefung": "Menschliche Prüfung: Du liest den Entwurf ohnehin selbst – eine zusätzliche Schleife verdoppelt nur den Aufwand.",
+        "kalender": "Kalender prüfen: Raum 1.204 ist am 14.2. frei – danach war aber nicht gefragt.",
+        "suche": "Suche: Nichts gefunden, was nicht schon in den Stichpunkten stand.",
+        "senden": "Senden / Ausführen: Die Mail ging raus – obwohl du sie selbst noch lesen wolltest.",
+        "standard": "{werkzeug}: Für diese Mail nicht nötig."
+      },
+      "ergebnis": "Mailentwurf an die Tutorinnen und Tutoren, bereit zum Gegenlesen.",
+      "beispiel": ["entwurf"],
+      "debrief": "Ein Entwurf, fertig. Alles andere klingt gründlich, bringt aber nichts: Die Fakten stehen in den Stichpunkten, und die Kontrolle übernimmst du selbst, bevor du sendest.",
+      "typischeFehler": [
+        { "bedingung": { "typ": "enthaelt", "werkzeug": "pruefung" }, "text": "Wer den Auftrag gibt, liest den Entwurf ohnehin selbst. Eine zusätzliche Prüfschleife ist hier Overkill." },
+        { "bedingung": { "typ": "enthaelt", "werkzeug": "kalender" }, "text": "Termin und Raum standen in den Stichpunkten. Den Kalender zu prüfen, war nicht beauftragt." },
+        { "bedingung": { "typ": "enthaelt", "werkzeug": "senden" }, "text": "Du wolltest die Mail selbst lesen und abschicken. Der Agent hat dir das aus der Hand genommen." }
+      ]
+    }]
+  },
+  {
+    "id": "M28", "titel": "Referatsthemen sortieren", "typ": "overkill", "schwierigkeit": "mittel", "thema": "literatur",
+    "ziel": "Die Themenliste alphabetisch sortieren und nummerieren.",
+    "stufen": [{
+      "auftrag": "Sortiere die zwölf Referatsthemen alphabetisch und nummeriere sie durch, damit ich sie ins Lernportal kopieren kann.",
+      "material": [{ "titel": "Themenliste (unsortiert)", "text": "Wissenschaftskommunikation; Open Access; Peer Review; Bibliometrie; Forschungsdaten; Plagiat; Preprints; Zitierstile; Altmetrics; Predatory Journals; Retractions; Citizen Science" }],
+      "regeln": { "required": ["entwurf"], "forbidden": ["senden"], "order": [], "reviewBeforeHighRisk": true, "optimalLength": 1 },
+      "observations": {
+        "entwurf": "Entwurf erstellen: Zwölf Themen alphabetisch sortiert und von 1 bis 12 nummeriert.",
+        "rechner": "Rechner: Von 1 bis 12 durchzuzählen ist keine Rechenaufgabe.",
+        "datei": "Datei lesen: Die Liste lag schon im Material.",
+        "suche": "Suche: Zu jedem Thema gibt es Tausende Treffer – gefragt war nur die Sortierung.",
+        "senden": "Senden / Ausführen: Die Liste wurde ins Lernportal gestellt – das wollte die Lehrperson selbst tun.",
+        "standard": "{werkzeug}: Für das Sortieren nicht nötig."
+      },
+      "ergebnis": "Alphabetisch sortierte, nummerierte Liste der zwölf Themen (1. Altmetrics … 12. Zitierstile).",
+      "beispiel": ["entwurf"],
+      "debrief": "Sortieren und Nummerieren ist reine Textarbeit. Ein guter Agent erledigt das in einem Entwurf. Rechner und Suche wirken gründlich, haben hier aber nichts beizutragen.",
+      "typischeFehler": [
+        { "bedingung": { "typ": "enthaelt", "werkzeug": "rechner" }, "text": "Durchnummerieren ist Formatieren, nicht Rechnen. Der Rechner bringt hier nichts." },
+        { "bedingung": { "typ": "enthaelt", "werkzeug": "suche" }, "text": "Die Themen standen fest. Recherche war nicht gefragt." }
+      ]
+    }]
+  },
+  {
+    "id": "M29", "titel": "Raumänderung auf Englisch", "typ": "overkill", "schwierigkeit": "mittel", "thema": "mail",
+    "ziel": "Die Raumänderung ins Englische übertragen.",
+    "stufen": [{
+      "auftrag": "Übersetze die Raumänderung für die Erasmus-Studierenden ins Englische. Ich stelle den Text selbst ins Lernportal.",
+      "material": [{ "titel": "Deutscher Text", "text": "Das Seminar „Europäische Integration“ findet ab dem 18. November nicht mehr in Raum 2.012, sondern in Raum 4.110 (Hauptgebäude, 4. OG) statt. Die Zeit bleibt unverändert: dienstags 14–15:30 Uhr." }],
+      "regeln": { "required": ["entwurf"], "forbidden": ["senden"], "order": [], "reviewBeforeHighRisk": true, "optimalLength": 1 },
+      "observations": {
+        "entwurf": "Entwurf erstellen: Englische Fassung der Raumänderung erstellt.",
+        "suche": "Suche: Ein Online-Wörterbuch bestätigt „room change“ – das wusste der Agent auch so.",
+        "kalender": "Kalender prüfen: Raum 4.110 ist dienstags 14–15:30 Uhr belegt – vom Seminar selbst.",
+        "pruefung": "Menschliche Prüfung: Die Lehrperson stellt den Text ohnehin selbst ein und liest ihn dabei.",
+        "senden": "Senden / Ausführen: Der Text wurde ins Lernportal gestellt – das wollte die Lehrperson selbst tun.",
+        "standard": "{werkzeug}: Für die Übersetzung nicht nötig."
+      },
+      "ergebnis": "Englische Fassung: “From 18 November, the seminar ‘European Integration’ will take place in room 4.110 (main building, 4th floor) instead of room 2.012. The time remains unchanged: Tuesdays, 2:00–3:30 pm.”",
+      "beispiel": ["entwurf"],
+      "debrief": "Übersetzen ist eine Kernstärke von Sprachmodellen – ein Entwurf genügt. Den Raum noch einmal zu prüfen oder eine Freigabe einzuholen, klingt sorgfältig, ist hier aber Overkill: Die Lehrperson veröffentlicht selbst.",
+      "typischeFehler": [
+        { "bedingung": { "typ": "enthaelt", "werkzeug": "kalender" }, "text": "Der Raumwechsel ist entschieden. Übersetzen heißt nicht, die Entscheidung erneut zu prüfen." },
+        { "bedingung": { "typ": "enthaelt", "werkzeug": "suche" }, "text": "Für eine kurze Alltagsübersetzung braucht ein Sprachmodell kein Wörterbuch." }
+      ]
+    }]
+  },
+  {
+    "id": "M30", "titel": "To-dos aus dem Protokoll", "typ": "overkill", "schwierigkeit": "schwer", "thema": "pruefungsanmeldung",
+    "ziel": "Eine To-do-Liste mit Verantwortlichen und Fristen erstellen.",
+    "stufen": [{
+      "auftrag": "Erstelle aus dem Protokoll der Prüfungsausschusssitzung eine To-do-Liste mit Verantwortlichen und Fristen. Ich verteile sie später selbst.",
+      "material": [{ "titel": "Protokoll (Auszug)", "text": "TOP 2: Frau Arslan aktualisiert bis 15.01. das Merkblatt zur Prüfungsanmeldung.\nTOP 3: Herr Novak prüft bis 31.01. die Härtefallanträge.\nTOP 4: Das Prüfungsamt stellt die neuen Anmeldefristen bis 07.02. online.\nTOP 5: Nächste Sitzung am 20.02." }],
+      "regeln": { "required": ["entwurf"], "forbidden": ["senden"], "order": [], "reviewBeforeHighRisk": true, "optimalLength": 1 },
+      "observations": {
+        "entwurf": "Entwurf erstellen: To-do-Liste mit drei Aufgaben, Verantwortlichen und Fristen, dazu der nächste Sitzungstermin.",
+        "kalender": "Kalender prüfen: Der 20.02. steht schon im Kalender des Ausschusses – und auch im Protokoll.",
+        "rechner": "Rechner: Tage bis zu den Fristen ausgerechnet – gefragt waren aber die Daten selbst.",
+        "suche": "Suche: Die Namen im Personalverzeichnis nachgeschlagen – die Verantwortlichen standen schon fest.",
+        "senden": "Senden / Ausführen: Die Liste ging an alle Ausschussmitglieder – verteilen wollte die Auftraggeberin selbst.",
+        "standard": "{werkzeug}: Für die To-do-Liste nicht nötig."
+      },
+      "ergebnis": "To-do-Liste: Merkblatt aktualisieren (Arslan, 15.01.), Härtefallanträge prüfen (Novak, 31.01.), Anmeldefristen online stellen (Prüfungsamt, 07.02.); nächste Sitzung 20.02.",
+      "beispiel": ["entwurf"],
+      "debrief": "Viele Werkzeuge passen scheinbar: Fristen (Kalender? Rechner?), Namen (Suche?), Verteilen (Senden?). Gefragt war aber nur das Umformen eines vorliegenden Textes. Ein guter Agent erstellt einen Entwurf – und überlässt das Verteilen der Person, die es angekündigt hat.",
+      "typischeFehler": [
+        { "bedingung": { "typ": "enthaelt", "werkzeug": "senden" }, "text": "„Ich verteile sie später selbst“ – der Agent hat trotzdem verschickt. Die Liste ist eine interne Arbeitsgrundlage, keine Rundmail." },
+        { "bedingung": { "typ": "enthaelt", "werkzeug": "rechner" }, "text": "Fristen sind hier Daten, keine Rechenaufgabe." },
+        { "bedingung": { "typ": "oder", "bedingungen": [{ "typ": "enthaelt", "werkzeug": "kalender" }, { "typ": "enthaelt", "werkzeug": "suche" }] }, "text": "Verantwortliche und Termine stehen im Protokoll. Nachschlagen oder Kalenderprüfen bringt nichts Neues." }
+      ]
+    }]
+  }
+]

@@ -1,0 +1,85 @@
+{
+  "pools": [
+    {
+      "id": "alltag",
+      "name": "Alltag",
+      "beschreibung": "Dinge aus Wohnung, Küche, Stadt und Freizeit.",
+      "words": [
+        "Tisch", "Stuhl", "Lampe", "Fenster", "Teppich", "Kissen", "Spiegel", "Schrank", "Sofa", "Mikrowelle",
+        "Herd", "Toaster", "Gabel", "Löffel", "Messer", "Teller", "Tasse", "Pfanne", "Schlüssel", "Brille",
+        "Jacke", "Mütze", "Schal", "Regenschirm", "Zahnbürste", "Seife", "Handtuch", "Dusche", "Badewanne", "Zeitung",
+        "Briefkasten", "Paket", "Fahrrad", "Auto", "Straßenbahn", "Supermarkt", "Bäckerei", "Apotheke", "Kaffee", "Brot",
+        "Butter", "Käse", "Apfel", "Banane", "Nudeln", "Suppe", "Pizza", "Kuchen", "Schokolade", "Milch",
+        "Wecker", "Kalender", "Handy", "Fernseher", "Sessel", "Bett", "Treppe", "Aufzug", "Garten", "Balkon",
+        "Nachbar", "Miete", "Rechnung", "Wäsche", "Staubsauger", "Besen", "Kerze", "Hammer", "Schere", "Pflaster",
+        "Geschenk", "Geburtstag", "Urlaub", "Koffer", "Friseur", "Kino", "Konzert", "Radio", "Kopfhörer", "Rucksack",
+        "Steckdose", "Fernbedienung", "Vorhang", "Sonntag", "Frühstück", "Socke", "Waschmaschine", "Kochtopf", "Gießkanne", "Mülleimer"
+      ]
+    },
+    {
+      "id": "uni",
+      "name": "Uni & Studium",
+      "beschreibung": "Lehre, Forschung und Leben auf dem Campus.",
+      "words": [
+        "Hörsaal", "Seminar", "Vorlesung", "Klausur", "Prüfung", "Hausarbeit", "Referat", "Bibliothek", "Mensa", "Semester",
+        "Stundenplan", "Professorin", "Dozent", "Tutorium", "Übung", "Skript", "Folie", "Mitschrift", "Abschluss", "Bachelor",
+        "Master", "Promotion", "Doktorarbeit", "Stipendium", "Bafög", "Wohnheim", "Mitbewohner", "Campus", "Fakultät", "Institut",
+        "Studienfach", "Einschreibung", "Matrikelnummer", "Zeugnis", "Praktikum", "Erasmus", "Sprechstunde", "Lerngruppe", "Karteikarte", "Textmarker",
+        "Laptop", "Kopierer", "Fachschaft", "Studienausweis", "Rückmeldung", "Abgabe", "Frist", "Zitat", "Quelle", "Literatur",
+        "Fußnote", "Gliederung", "Experiment", "Labor", "Statistik", "Umfrage", "Interview", "Hypothese", "Theorie", "Methode",
+        "Ergebnis", "Diskussion", "Plagiat", "Gutachten", "Kolloquium", "Konferenz", "Poster", "Vortrag", "Präsentation", "Gruppenarbeit",
+        "Lehrbuch", "Kommilitone", "Rektorat", "Lehrstuhl", "Forschung", "Wissenschaft", "Hiwi", "Zeitschrift", "Abstract", "Ersti",
+        "Bewerbung", "Ferien", "Zulassung", "Modul", "Bescheinigung", "Notenspiegel", "Wartezimmer", "Lernplattform", "Forscherin", "Kurs"
+      ]
+    },
+    {
+      "id": "ki",
+      "name": "KI & Daten",
+      "beschreibung": "Begriffe rund um Computer, Daten und künstliche Intelligenz.",
+      "words": [
+        "Algorithmus", "Datensatz", "Modell", "Training", "Vorhersage", "Risiko", "Netzwerk", "Neuron", "Parameter", "Chatbot",
+        "Roboter", "Automatisierung", "Datenbank", "Tabelle", "Server", "Cloud", "Speicher", "Prozessor", "Grafikkarte", "Software",
+        "Hardware", "Programm", "Quellcode", "Fehler", "Verschlüsselung", "Passwort", "Datenschutz", "Privatsphäre", "Überwachung", "Kamera",
+        "Sensor", "Biometrie", "Übersetzung", "Suchmaschine", "Empfehlung", "Werbung", "Profil", "Cookie", "Browser", "Internet",
+        "Website", "Smartphone", "Tablet", "Bildschirm", "Tastatur", "Drucker", "Kabel", "Akku", "Energie", "Rechenzentrum",
+        "Verzerrung", "Fairness", "Ethik", "Regulierung", "Gesetz", "Urheberrecht", "Fälschung", "Deepfake", "Halluzination", "Prompt",
+        "Antwort", "Frage", "Wissen", "Information", "Muster", "Merkmal", "Kategorie", "Diagramm", "Kurve", "Durchschnitt",
+        "Zufall", "Simulation", "Schach", "Agent", "Werkzeug", "Schnittstelle", "Token", "Vektor", "Ähnlichkeit", "Abstand",
+        "Dimension", "Pixel", "Video", "Stimme", "Sprache", "Formel", "Computer", "Digitalisierung", "Plattform", "Hacker"
+      ]
+    },
+    {
+      "id": "natur",
+      "name": "Natur",
+      "beschreibung": "Pflanzen, Tiere, Landschaften und Wetter.",
+      "words": [
+        "Baum", "Wald", "Wiese", "Blume", "Rose", "Tulpe", "Eiche", "Tanne", "Moos", "Pilz",
+        "Farn", "Fluss", "Meer", "Ozean", "Strand", "Insel", "Berg", "Gipfel", "Höhle", "Vulkan",
+        "Wüste", "Gletscher", "Regen", "Schnee", "Gewitter", "Blitz", "Donner", "Nebel", "Wolke", "Wind",
+        "Sturm", "Sonne", "Mond", "Stern", "Himmel", "Frühling", "Sommer", "Herbst", "Winter", "Fuchs",
+        "Hase", "Igel", "Hirsch", "Wolf", "Eule", "Adler", "Spatz", "Amsel", "Biene", "Ameise",
+        "Schmetterling", "Käfer", "Spinne", "Frosch", "Schnecke", "Fisch", "Delfin", "Robbe", "Pinguin", "Möwe",
+        "Krabbe", "Muschel", "Koralle", "Erde", "Stein", "Sand", "Felsen", "Kristall", "Quelle", "Wasserfall",
+        "Teich", "Moor", "Acker", "Weizen", "Kirsche", "Beere", "Nuss", "Samen", "Wurzel", "Blatt",
+        "Zweig", "Rinde", "Knospe", "Gras", "Kaktus", "Palme", "Dschungel", "Elefant", "Gorilla", "Zebra",
+        "Affe", "Tiger", "Schlange", "Krokodil", "Pferd", "Schaf", "Ziege", "Ente", "Frost", "Lawine"
+      ]
+    },
+    {
+      "id": "gemischt",
+      "name": "Gemischt",
+      "beschreibung": "Bunte Mischung aus allen Bereichen – für die größte Bandbreite.",
+      "words": [
+        "Gitarre", "Klavier", "Trommel", "Theater", "Museum", "Gemälde", "Schloss", "Burg", "Brücke", "Turm",
+        "Kirche", "Hafen", "Schiff", "Flugzeug", "Bahnhof", "Fußball", "Tennis", "Schwimmbad", "Medaille", "Krone",
+        "König", "Ritter", "Drache", "Zauberer", "Märchen", "Rakete", "Planet", "Astronaut", "Pirat", "Schatz",
+        "Landkarte", "Kompass", "Laterne", "Feuer", "Rauch", "Küche", "Rezept", "Gewürz", "Pfeffer", "Zitrone",
+        "Honig", "Kaffee", "Hund", "Katze", "Wald", "Bibliothek", "Klausur", "Mensa", "Computer", "Algorithmus",
+        "Roboter", "Schnee", "Geld", "Brot", "Fahrrad", "Krankenhaus", "Arzt", "Regenschirm", "Vulkan", "Pinguin",
+        "Wüste", "Elefant", "Kamera", "Passwort", "Statistik", "Zeitung", "Kalender", "Schlüssel", "Spiegel", "Kerze",
+        "Insel", "Gewitter", "Diamant", "Polizei", "Karneval", "Zirkus", "Ballon", "Geige", "Orchester", "Tanz",
+        "Hochzeit", "Urlaub", "Koffer", "Garten", "Apfel", "Schokolade", "Wolke", "Mond", "Ozean", "Labor"
+      ]
+    }
+  ]
+}
