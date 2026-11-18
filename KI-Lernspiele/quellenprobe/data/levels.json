@@ -1,0 +1,641 @@
+[
+  {
+    "id": "L01",
+    "schwierigkeit": "leicht",
+    "thema": "mensa",
+    "quellen": [
+      {
+        "titel": "Neue Öffnungszeiten in der Mensa Campus Nord",
+        "typ": "Pressemitteilung",
+        "text": "Das Studierendenwerk passt die Öffnungszeiten der Mensa Campus Nord an die geänderten Vorlesungszeiten an. Ab dem 4. November ist die Essensausgabe montags bis donnerstags von 11:15 bis 14:30 Uhr geöffnet, freitags bis 14:00 Uhr. Das Tellergericht kostet für Studierende weiterhin 3,10 Euro, für Bedienstete 4,60 Euro und für Gäste 6,20 Euro. Zusätzlich gibt es täglich eine vegane Linie. Bezahlt werden kann mit der Campuscard oder mit girocard; Bargeld wird ab dem 1. Januar nicht mehr angenommen. Wer abends noch etwas essen möchte, findet in der benachbarten Cafeteria bis 18:00 Uhr ein kleines warmes Angebot. Rückmeldungen zu den neuen Zeiten nimmt das Studierendenwerk über das Feedbackformular auf seiner Website entgegen."
+      }
+    ],
+    "frage": "Was ändert sich ab November in der Mensa Campus Nord?",
+    "aussagen": [
+      { "id": "a1", "text": "Ab dem 4. November öffnet die Essensausgabe montags bis donnerstags um 11:15 Uhr.", "halluzination": false, "erklaerung": "Datum und Uhrzeit stehen genau so in der Pressemitteilung.", "beleg": "Ab dem 4. November ist die Essensausgabe montags bis donnerstags von 11:15 bis 14:30 Uhr geöffnet" },
+      { "id": "a2", "text": "Für Studierende kostet das Tellergericht künftig 3,40 Euro.", "halluzination": true, "muster": "zahl", "erklaerung": "Die Quelle nennt 3,10 Euro und betont, dass der Preis gleich bleibt. Die Antwort nennt einen anderen Betrag und unterstellt eine Preiserhöhung.", "beleg": "Das Tellergericht kostet für Studierende weiterhin 3,10 Euro" },
+      { "id": "a3", "text": "Freitags schließt die Ausgabe bereits um 14:00 Uhr.", "halluzination": false, "erklaerung": "Die abweichende Freitagszeit ist in der Quelle genannt.", "beleg": "freitags bis 14:00 Uhr" },
+      { "id": "a4", "text": "Ab Januar ist in der Mensa keine Barzahlung mehr möglich.", "halluzination": false, "erklaerung": "Die Quelle kündigt das Ende der Barzahlung zum 1. Januar an.", "beleg": "Bargeld wird ab dem 1. Januar nicht mehr angenommen" },
+      { "id": "a5", "text": "Ein kleines warmes Abendangebot gibt es in der benachbarten Cafeteria bis 18 Uhr.", "halluzination": false, "erklaerung": "Das Abendangebot der Cafeteria ist in der Quelle beschrieben.", "beleg": "findet in der benachbarten Cafeteria bis 18:00 Uhr ein kleines warmes Angebot" }
+    ]
+  },
+  {
+    "id": "L02",
+    "schwierigkeit": "leicht",
+    "thema": "bibliothek",
+    "quellen": [
+      {
+        "titel": "Neuigkeiten zur Fernleihe",
+        "typ": "E-Mail",
+        "text": "Liebe Nutzerinnen und Nutzer, ab dem Sommersemester sinkt die Gebühr für Fernleihbestellungen von 1,50 Euro auf 1,00 Euro pro Bestellung. Die Gebühr wird wie bisher bei Abgabe der Bestellung von Ihrem Bibliothekskonto abgebucht. Die Leihfrist für Fernleihen beträgt vier Wochen und kann einmal verlängert werden, sofern die gebende Bibliothek zustimmt. Sobald Ihr Medium eingetroffen ist, erhalten Sie eine Benachrichtigung per E-Mail; abholen können Sie es an der Ausleihtheke im Erdgeschoss. Wir prüfen derzeit außerdem, ob Fernleihen künftig auch direkt an die Institutsbibliotheken geliefert werden können. Über das Ergebnis informieren wir Sie rechtzeitig. Mit freundlichen Grüßen, Ihr Fernleihteam"
+      }
+    ],
+    "frage": "Was muss ich zur Fernleihe wissen?",
+    "aussagen": [
+      { "id": "a1", "text": "Eine Fernleihbestellung kostet ab dem Sommersemester 1,00 Euro.", "halluzination": false, "erklaerung": "Die neue Gebühr steht so in der E-Mail.", "beleg": "ab dem Sommersemester sinkt die Gebühr für Fernleihbestellungen von 1,50 Euro auf 1,00 Euro pro Bestellung" },
+      { "id": "a2", "text": "Die Leihfrist für Fernleihen beträgt vier Wochen.", "halluzination": false, "erklaerung": "Die Leihfrist ist in der Quelle genannt.", "beleg": "Die Leihfrist für Fernleihen beträgt vier Wochen" },
+      { "id": "a3", "text": "Fernleihen werden künftig auch direkt an die Institutsbibliotheken geliefert.", "halluzination": true, "muster": "geplant", "erklaerung": "Die Bibliothek prüft diese Möglichkeit erst. Die Antwort stellt eine offene Prüfung als beschlossene Neuerung dar.", "beleg": "Wir prüfen derzeit außerdem, ob Fernleihen künftig auch direkt an die Institutsbibliotheken geliefert werden können." },
+      { "id": "a4", "text": "Wenn das bestellte Medium da ist, wird man per E-Mail benachrichtigt.", "halluzination": false, "erklaerung": "Die Benachrichtigung per E-Mail ist in der Quelle beschrieben.", "beleg": "Sobald Ihr Medium eingetroffen ist, erhalten Sie eine Benachrichtigung per E-Mail" },
+      { "id": "a5", "text": "Abgeholt wird an der Ausleihtheke im Erdgeschoss.", "halluzination": false, "erklaerung": "Der Abholort steht in der E-Mail.", "beleg": "abholen können Sie es an der Ausleihtheke im Erdgeschoss" }
+    ]
+  },
+  {
+    "id": "L03",
+    "schwierigkeit": "leicht",
+    "thema": "it-dienste",
+    "quellen": [
+      {
+        "titel": "CampusConnect 4.2 – Kurzanleitung",
+        "typ": "Software-Dokumentation",
+        "text": "CampusConnect ist der VPN-Client der Universität. Er stellt eine verschlüsselte Verbindung zum Hochschulnetz her, sodass Sie auch von zu Hause auf lizenzierte Datenbanken und interne Dienste zugreifen können. Die Anmeldung erfolgt mit Ihrer Uni-Kennung; seit Version 4.0 ist zusätzlich die Zwei-Faktor-Authentifizierung verpflichtend. Unterstützt werden Windows 10 und 11, macOS ab Version 13 sowie Ubuntu ab 22.04. Für Android und iOS steht die App CampusConnect Mobile zur Verfügung. Versionen 3.x werden ab dem 31. März nicht mehr unterstützt und sollten aktualisiert werden. Bitte beachten Sie: Für die Ablage und das Teilen von Dateien ist nicht CampusConnect, sondern der Dienst CampusCloud vorgesehen; dort stehen jeder Person 50 GB Speicher zur Verfügung. Bei Problemen wenden Sie sich an den IT-Helpdesk."
+      }
+    ],
+    "frage": "Wofür brauche ich CampusConnect und was muss ich beachten?",
+    "aussagen": [
+      { "id": "a1", "text": "Mit CampusConnect kann man auch von zu Hause auf lizenzierte Datenbanken zugreifen.", "halluzination": false, "erklaerung": "Genau diesen Zweck nennt die Dokumentation.", "beleg": "sodass Sie auch von zu Hause auf lizenzierte Datenbanken und interne Dienste zugreifen können" },
+      { "id": "a2", "text": "Seit Version 4.0 ist die Zwei-Faktor-Authentifizierung Pflicht.", "halluzination": false, "erklaerung": "Version und Pflicht stehen so in der Quelle.", "beleg": "seit Version 4.0 ist zusätzlich die Zwei-Faktor-Authentifizierung verpflichtend" },
+      { "id": "a3", "text": "Über CampusConnect stehen jeder Person 50 GB Speicher für eigene Dateien zur Verfügung.", "halluzination": true, "muster": "verwechslung", "erklaerung": "Die 50 GB gehören zum Dienst CampusCloud, nicht zum VPN-Client. Die Antwort verwechselt zwei ähnlich benannte Dienste.", "beleg": "Für die Ablage und das Teilen von Dateien ist nicht CampusConnect, sondern der Dienst CampusCloud vorgesehen; dort stehen jeder Person 50 GB Speicher zur Verfügung" },
+      { "id": "a4", "text": "Für Smartphones gibt es die App CampusConnect Mobile.", "halluzination": false, "erklaerung": "Die App für Android und iOS ist in der Quelle genannt.", "beleg": "Für Android und iOS steht die App CampusConnect Mobile zur Verfügung." },
+      { "id": "a5", "text": "Bei Problemen ist der IT-Helpdesk rund um die Uhr erreichbar.", "halluzination": true, "muster": "fehlende-quelle", "erklaerung": "Die Quelle verweist zwar auf den IT-Helpdesk, sagt aber nichts über Erreichbarkeitszeiten. „Rund um die Uhr“ ist frei ergänzt.", "beleg": "Bei Problemen wenden Sie sich an den IT-Helpdesk." },
+      { "id": "a6", "text": "Ältere Versionen 3.x werden ab dem 31. März nicht mehr unterstützt.", "halluzination": false, "erklaerung": "Das Support-Ende für 3.x steht in der Dokumentation.", "beleg": "Versionen 3.x werden ab dem 31. März nicht mehr unterstützt" }
+    ]
+  },
+  {
+    "id": "L04",
+    "schwierigkeit": "leicht",
+    "thema": "pruefungsordnung",
+    "quellen": [
+      {
+        "titel": "Prüfungsordnung Bachelor, §§ 14–15 (Auszug)",
+        "typ": "Prüfungsordnung",
+        "text": "§ 14 Wiederholung von Prüfungen. (1) Bestandene Modulprüfungen können nicht wiederholt werden. (2) Nicht bestandene Modulprüfungen können zweimal wiederholt werden. Die Wiederholung soll im folgenden Semester stattfinden. § 15 Rücktritt und Versäumnis. (1) Studierende können bis sieben Tage vor dem Prüfungstermin ohne Angabe von Gründen von einer Prüfung zurücktreten. (2) Wer nach Ablauf dieser Frist zurücktritt oder einen Prüfungstermin versäumt, muss triftige Gründe unverzüglich schriftlich beim Prüfungsamt geltend machen. Bei Krankheit ist innerhalb von drei Werktagen ein ärztliches Attest vorzulegen. (3) Werden die Gründe nicht anerkannt, gilt die Prüfung als mit „nicht ausreichend“ (5,0) bewertet."
+      }
+    ],
+    "frage": "Was passiert, wenn ich eine Prüfung nicht bestehe oder nicht antreten kann?",
+    "aussagen": [
+      { "id": "a1", "text": "Eine nicht bestandene Modulprüfung kann zweimal wiederholt werden.", "halluzination": false, "erklaerung": "Das regelt § 14 Abs. 2.", "beleg": "Nicht bestandene Modulprüfungen können zweimal wiederholt werden." },
+      { "id": "a2", "text": "Von einer Prüfung kann man jederzeit ohne Angabe von Gründen zurücktreten.", "halluzination": true, "muster": "schlagzeile", "erklaerung": "Ohne Gründe geht der Rücktritt nur bis sieben Tage vor dem Termin. Die Antwort lässt diese Frist weg und macht aus einer begrenzten Regel eine allgemeine.", "beleg": "Studierende können bis sieben Tage vor dem Prüfungstermin ohne Angabe von Gründen von einer Prüfung zurücktreten." },
+      { "id": "a3", "text": "Nach § 14 Abs. 3 muss bei Krankheit innerhalb von drei Werktagen ein ärztliches Attest vorliegen.", "halluzination": true, "muster": "zitation", "erklaerung": "Die Attestpflicht steht in § 15 Abs. 2. Einen § 14 Abs. 3 enthält der Auszug nicht – die Fundstelle ist erfunden.", "beleg": "Bei Krankheit ist innerhalb von drei Werktagen ein ärztliches Attest vorzulegen." },
+      { "id": "a4", "text": "Werden die Gründe für ein Versäumnis nicht anerkannt, gilt die Prüfung als mit 5,0 bewertet.", "halluzination": false, "erklaerung": "Das steht in § 15 Abs. 3.", "beleg": "Werden die Gründe nicht anerkannt, gilt die Prüfung als mit „nicht ausreichend“ (5,0) bewertet." },
+      { "id": "a5", "text": "Eine bestandene Modulprüfung kann nicht wiederholt werden.", "halluzination": false, "erklaerung": "Das regelt § 14 Abs. 1.", "beleg": "Bestandene Modulprüfungen können nicht wiederholt werden." }
+    ]
+  },
+  {
+    "id": "L05",
+    "schwierigkeit": "leicht",
+    "thema": "forschung",
+    "quellen": [
+      {
+        "titel": "Abstract: Quiz-App und Klausurerfolg",
+        "typ": "Paper-Abstract",
+        "text": "Wir untersuchten, wie die freiwillige Nutzung einer Quiz-App mit den Ergebnissen in der Einführungsklausur Statistik zusammenhängt. Grundlage waren Nutzungsdaten und Noten von 412 Studierenden aus zwei Jahrgängen. Studierende, die die App mindestens einmal pro Woche nutzten, erzielten im Mittel um 0,3 Notenstufen bessere Ergebnisse als Studierende ohne regelmäßige Nutzung. Da die Nutzung freiwillig war, lässt sich aus den Daten kein kausaler Effekt ableiten: Es ist möglich, dass ohnehin motiviertere Studierende die App häufiger verwendet haben. Eine randomisierte Folgestudie ist für das kommende Wintersemester geplant. Die Daten wurden anonymisiert ausgewertet; ein positives Votum der Ethikkommission liegt vor."
+      }
+    ],
+    "frage": "Was hat die Studie zur Quiz-App herausgefunden?",
+    "aussagen": [
+      { "id": "a1", "text": "Ausgewertet wurden Daten von 412 Studierenden aus zwei Jahrgängen.", "halluzination": false, "erklaerung": "Stichprobe und Jahrgänge stehen im Abstract.", "beleg": "Grundlage waren Nutzungsdaten und Noten von 412 Studierenden aus zwei Jahrgängen." },
+      { "id": "a2", "text": "Wer die App mindestens wöchentlich nutzte, schnitt im Mittel um 0,3 Notenstufen besser ab.", "halluzination": false, "erklaerung": "Das ist der beobachtete Unterschied, genau wie im Abstract beschrieben.", "beleg": "Studierende, die die App mindestens einmal pro Woche nutzten, erzielten im Mittel um 0,3 Notenstufen bessere Ergebnisse" },
+      { "id": "a3", "text": "Regelmäßiges Üben mit der App verbessert die Klausurnote also um rund 0,3 Notenstufen.", "halluzination": true, "muster": "korrelation", "erklaerung": "Die Studie zeigt nur einen Zusammenhang. Die Autorinnen und Autoren schließen ausdrücklich aus, daraus eine Wirkung der App abzuleiten.", "beleg": "Da die Nutzung freiwillig war, lässt sich aus den Daten kein kausaler Effekt ableiten" },
+      { "id": "a4", "text": "Eine randomisierte Folgestudie ist geplant.", "halluzination": false, "erklaerung": "Die Folgestudie wird im Abstract als geplant angekündigt.", "beleg": "Eine randomisierte Folgestudie ist für das kommende Wintersemester geplant." },
+      { "id": "a5", "text": "Für die Studie liegt ein positives Votum der Ethikkommission vor.", "halluzination": false, "erklaerung": "Das Votum ist im Abstract erwähnt.", "beleg": "ein positives Votum der Ethikkommission liegt vor" }
+    ]
+  },
+  {
+    "id": "L06",
+    "schwierigkeit": "mittel",
+    "thema": "studienorganisation",
+    "quellen": [
+      {
+        "titel": "Merkblatt Rückmeldung (Stand: Juli)",
+        "typ": "Merkblatt",
+        "text": "Damit Sie im nächsten Semester weiter eingeschrieben bleiben, müssen Sie sich fristgerecht zurückmelden. Die Rückmeldung erfolgt automatisch, sobald Ihr Semesterbeitrag vollständig auf dem Konto der Universität eingegangen ist. Der Semesterbeitrag beträgt derzeit 298,60 Euro. Er setzt sich zusammen aus dem Sozialbeitrag für das Studierendenwerk, dem Beitrag für die Studierendenschaft und dem Semesterticket. Bitte geben Sie bei der Überweisung unbedingt Ihre Matrikelnummer als Verwendungszweck an, da die Zahlung sonst nicht zugeordnet werden kann. Wer die Frist versäumt, muss mit einer Säumnisgebühr rechnen und riskiert im schlimmsten Fall die Exmatrikulation."
+      },
+      {
+        "titel": "E-Mail des Studierendensekretariats (Januar)",
+        "typ": "E-Mail",
+        "text": "Liebe Studierende, die Rückmeldefrist für das Sommersemester endet am 15. Februar. Bitte beachten Sie, dass sich der Semesterbeitrag zum Sommersemester auf 312,40 Euro erhöht, weil der Preis für das Semesterticket gestiegen ist. Bei verspäteter Zahlung wird eine Säumnisgebühr von 15 Euro fällig. Wenn Sie ein Urlaubssemester beantragen möchten, nutzen Sie bitte bis zum Ende der Rückmeldefrist das Formular im Campusportal. Studierende, die vom Semesterticket befreit sind, zahlen einen entsprechend reduzierten Beitrag. Bei Fragen erreichen Sie uns über das Kontaktformular. Viele Grüße, Ihr Studierendensekretariat"
+      }
+    ],
+    "frage": "Was muss ich für die Rückmeldung zum Sommersemester tun?",
+    "aussagen": [
+      { "id": "a1", "text": "Für das Sommersemester sind 298,60 Euro Semesterbeitrag zu überweisen.", "halluzination": true, "muster": "veraltet", "erklaerung": "Der Betrag stammt aus dem älteren Merkblatt vom Juli. Die neuere E-Mail nennt für das Sommersemester 312,40 Euro.", "beleg": "dass sich der Semesterbeitrag zum Sommersemester auf 312,40 Euro erhöht" },
+      { "id": "a2", "text": "Die Rückmeldefrist endet am 15. März.", "halluzination": true, "muster": "zahl", "erklaerung": "Laut E-Mail endet die Frist am 15. Februar.", "beleg": "die Rückmeldefrist für das Sommersemester endet am 15. Februar" },
+      { "id": "a3", "text": "Bei der Überweisung muss die Matrikelnummer als Verwendungszweck angegeben werden.", "halluzination": false, "erklaerung": "Das Merkblatt weist ausdrücklich darauf hin.", "beleg": "Bitte geben Sie bei der Überweisung unbedingt Ihre Matrikelnummer als Verwendungszweck an" },
+      { "id": "a4", "text": "Wer zu spät zahlt, muss eine Säumnisgebühr von 15 Euro zahlen.", "halluzination": false, "erklaerung": "Die Höhe der Säumnisgebühr nennt die E-Mail.", "beleg": "Bei verspäteter Zahlung wird eine Säumnisgebühr von 15 Euro fällig." },
+      { "id": "a5", "text": "Die Rückmeldung erfolgt automatisch, sobald der Beitrag vollständig eingegangen ist.", "halluzination": false, "erklaerung": "So beschreibt es das Merkblatt.", "beleg": "Die Rückmeldung erfolgt automatisch, sobald Ihr Semesterbeitrag vollständig auf dem Konto der Universität eingegangen ist." },
+      { "id": "a6", "text": "Ein Urlaubssemester beantragt man über ein Formular im Campusportal.", "halluzination": false, "erklaerung": "Das Formular wird in der E-Mail genannt.", "beleg": "nutzen Sie bitte bis zum Ende der Rückmeldefrist das Formular im Campusportal" }
+    ]
+  },
+  {
+    "id": "L07",
+    "schwierigkeit": "mittel",
+    "thema": "mensa",
+    "quellen": [
+      {
+        "titel": "Protokoll der Sitzung des Mensaausschusses",
+        "typ": "Sitzungsprotokoll",
+        "text": "TOP 3: Mehrwegbecher. Frau Kessler berichtet über die Testphase in der Cafeteria Sporthalle. Seit Oktober wurden dort rund 4.300 Heißgetränke in Mehrwegbechern ausgegeben. Eine Umfrage unter 1.200 Gästen ergab, dass 64 Prozent ein Pfand von einem Euro akzeptieren würden. Der Ausschuss empfiehlt einstimmig, ab dem Wintersemester in allen Mensen und Cafeterien ein Pfandsystem für Mehrwegbecher einzuführen. Die Entscheidung trifft der Verwaltungsrat des Studierendenwerks in seiner Sitzung am 12. Dezember. Bis dahin wird die Testphase in der Cafeteria Sporthalle bis Ende Januar verlängert. TOP 4: Verschiedenes. Herr Albers regt an, die Wasserspender im Foyer häufiger zu warten. Die Geschäftsführung sagt eine Prüfung zu."
+      }
+    ],
+    "frage": "Was wurde im Mensaausschuss zu Mehrwegbechern besprochen?",
+    "aussagen": [
+      { "id": "a1", "text": "In der Testphase wurden rund 4.300 Heißgetränke in Mehrwegbechern ausgegeben.", "halluzination": false, "erklaerung": "Die Zahl stammt aus dem Bericht im Protokoll.", "beleg": "Seit Oktober wurden dort rund 4.300 Heißgetränke in Mehrwegbechern ausgegeben." },
+      { "id": "a2", "text": "64 Prozent der Befragten würden ein Pfand von einem Euro akzeptieren.", "halluzination": false, "erklaerung": "Das Umfrageergebnis steht im Protokoll.", "beleg": "64 Prozent ein Pfand von einem Euro akzeptieren würden" },
+      { "id": "a3", "text": "Ab dem Wintersemester gibt es in allen Mensen und Cafeterien ein Pfandsystem für Mehrwegbecher.", "halluzination": true, "muster": "geplant", "erklaerung": "Der Ausschuss hat das nur empfohlen; entscheiden wird der Verwaltungsrat erst am 12. Dezember. Eine Empfehlung wird als feststehende Tatsache dargestellt.", "beleg": "Die Entscheidung trifft der Verwaltungsrat des Studierendenwerks in seiner Sitzung am 12. Dezember." },
+      { "id": "a4", "text": "Die Testphase in der Cafeteria Sporthalle wird bis Ende Januar verlängert.", "halluzination": false, "erklaerung": "Die Verlängerung ist im Protokoll festgehalten.", "beleg": "wird die Testphase in der Cafeteria Sporthalle bis Ende Januar verlängert" },
+      { "id": "a5", "text": "Die Empfehlung des Ausschusses fiel einstimmig.", "halluzination": false, "erklaerung": "Das Protokoll vermerkt die Einstimmigkeit.", "beleg": "Der Ausschuss empfiehlt einstimmig" }
+    ]
+  },
+  {
+    "id": "L08",
+    "schwierigkeit": "mittel",
+    "thema": "bibliothek",
+    "quellen": [
+      {
+        "titel": "Pilotprojekt: Lesesaal rund um die Uhr",
+        "typ": "Pressemitteilung",
+        "text": "Die Universitätsbibliothek öffnet ab dem 1. Dezember den Lesesaal im zweiten Obergeschoss im Rahmen eines Pilotprojekts von Montag bis Freitag rund um die Uhr. An Wochenenden bleibt es bei den bisherigen Öffnungszeiten von 9 bis 22 Uhr. Zwischen 22 und 8 Uhr ist der Zutritt nur mit gültiger Campuscard möglich; Ausleihe, Rückgabe an der Theke und Beratung sind in dieser Zeit nicht verfügbar. Die Rückgabeautomaten im Foyer können dagegen jederzeit genutzt werden. Der Pilot läuft zunächst bis zum Ende des Sommersemesters. Danach entscheidet die Bibliotheksleitung anhand der Nutzungszahlen, ob das Angebot fortgesetzt wird. „Wir reagieren damit auf einen häufig geäußerten Wunsch der Studierenden“, sagt die Leiterin der Benutzungsabteilung."
+      }
+    ],
+    "frage": "Ist die Bibliothek jetzt rund um die Uhr geöffnet?",
+    "aussagen": [
+      { "id": "a1", "text": "Ja, die Universitätsbibliothek ist ab dem 1. Dezember rund um die Uhr geöffnet.", "halluzination": true, "muster": "schlagzeile", "erklaerung": "Rund um die Uhr gilt nur für den Lesesaal im zweiten Obergeschoss, nur werktags und nur in einem befristeten Pilotprojekt. Die Antwort lässt alle Einschränkungen weg.", "beleg": "den Lesesaal im zweiten Obergeschoss im Rahmen eines Pilotprojekts von Montag bis Freitag rund um die Uhr" },
+      { "id": "a2", "text": "An Wochenenden gelten weiterhin die Öffnungszeiten von 9 bis 22 Uhr.", "halluzination": false, "erklaerung": "Die Wochenendzeiten bleiben laut Quelle unverändert.", "beleg": "An Wochenenden bleibt es bei den bisherigen Öffnungszeiten von 9 bis 22 Uhr." },
+      { "id": "a3", "text": "Nachts kommt man nur mit gültiger Campuscard hinein.", "halluzination": false, "erklaerung": "Die Zutrittsregel für die Nacht steht in der Pressemitteilung.", "beleg": "Zwischen 22 und 8 Uhr ist der Zutritt nur mit gültiger Campuscard möglich" },
+      { "id": "a4", "text": "Die Rückgabeautomaten im Foyer sind jederzeit nutzbar.", "halluzination": false, "erklaerung": "Die Quelle nennt die Automaten ausdrücklich als Ausnahme.", "beleg": "Die Rückgabeautomaten im Foyer können dagegen jederzeit genutzt werden." },
+      { "id": "a5", "text": "Über eine Fortsetzung wird nach dem Pilot anhand der Nutzungszahlen entschieden.", "halluzination": false, "erklaerung": "So beschreibt die Quelle das weitere Vorgehen.", "beleg": "Danach entscheidet die Bibliotheksleitung anhand der Nutzungszahlen, ob das Angebot fortgesetzt wird." }
+    ]
+  },
+  {
+    "id": "L09",
+    "schwierigkeit": "schwer",
+    "thema": "forschung",
+    "quellen": [
+      {
+        "titel": "Zwei Klimaprojekte gestartet",
+        "typ": "Pressemitteilung",
+        "text": "An der Mathematisch-Naturwissenschaftlichen Fakultät sind zwei neue Projekte zur Energieeffizienz gestartet. Das Projekt KLIMA-LAB untersucht, wie sich der Energiebedarf von Forschungslaboren senken lässt. Es wird von der Stiftung Forschungsraum über drei Jahre mit 850.000 Euro gefördert. Das Verbundprojekt KLIMA-NET vernetzt Gebäudesensoren mehrerer Hochschulen und erhält vom Land eine Förderung von 1,2 Millionen Euro. In KLIMA-LAB wird ein neuer Sensor eingesetzt, den der Industriepartner SensoTec entwickelt hat. Nach Angaben von SensoTec kann der Sensor den Energieverbrauch von Laborgeräten um bis zu 40 Prozent senken. Eigene Messungen des Projektteams sollen ab dem Frühjahr zeigen, ob sich dieser Wert im Laboralltag bestätigt."
+      },
+      {
+        "titel": "Projektskizze KLIMA-LAB (Auszug)",
+        "typ": "Projektbeschreibung",
+        "text": "Ziel von KLIMA-LAB ist ein Messkonzept, mit dem Labore ihren Energieverbrauch geräte- und raumgenau erfassen können. Im ersten Projektjahr werden dazu in vier Laboren der Chemie und der Biologie Sensoren installiert. Auf Grundlage der Messdaten entwickelt das Team im zweiten Jahr Empfehlungen, etwa für Standby-Zeiten von Tiefkühlschränken und Abzügen. Im dritten Jahr sollen die Empfehlungen in weiteren Laboren erprobt werden. Die Projektleitung liegt bei Dr. Mara Velten, Institut für Physikalische Chemie. Die Ergebnisse werden als offene Leitfäden veröffentlicht, damit auch andere Hochschulen sie nutzen können."
+      }
+    ],
+    "frage": "Worum geht es im Projekt KLIMA-LAB?",
+    "aussagen": [
+      { "id": "a1", "text": "KLIMA-LAB wird vom Land mit 1,2 Millionen Euro gefördert.", "halluzination": true, "muster": "verwechslung", "erklaerung": "Die Landesförderung von 1,2 Millionen Euro gehört zum Verbundprojekt KLIMA-NET. KLIMA-LAB erhält 850.000 Euro von einer Stiftung.", "beleg": "Es wird von der Stiftung Forschungsraum über drei Jahre mit 850.000 Euro gefördert." },
+      { "id": "a2", "text": "Der im Projekt eingesetzte Sensor senkt den Energieverbrauch von Laborgeräten um bis zu 40 Prozent.", "halluzination": true, "muster": "echo", "erklaerung": "Das ist eine Angabe des Herstellers SensoTec, die das Projekt erst noch überprüfen will. Die Antwort macht aus der Herstellerangabe eine belegte Tatsache.", "beleg": "Nach Angaben von SensoTec kann der Sensor den Energieverbrauch von Laborgeräten um bis zu 40 Prozent senken." },
+      { "id": "a3", "text": "Im ersten Projektjahr werden Sensoren in vier Laboren der Chemie und der Biologie installiert.", "halluzination": false, "erklaerung": "Das steht in der Projektskizze.", "beleg": "Im ersten Projektjahr werden dazu in vier Laboren der Chemie und der Biologie Sensoren installiert." },
+      { "id": "a4", "text": "Im zweiten Jahr entstehen Empfehlungen, zum Beispiel zu Standby-Zeiten von Tiefkühlschränken.", "halluzination": false, "erklaerung": "Die Projektskizze nennt dieses Beispiel.", "beleg": "entwickelt das Team im zweiten Jahr Empfehlungen, etwa für Standby-Zeiten von Tiefkühlschränken und Abzügen" },
+      { "id": "a5", "text": "Die Ergebnisse sollen als offene Leitfäden auch anderen Hochschulen zur Verfügung stehen.", "halluzination": false, "erklaerung": "So ist die Veröffentlichung in der Skizze beschrieben.", "beleg": "Die Ergebnisse werden als offene Leitfäden veröffentlicht, damit auch andere Hochschulen sie nutzen können." }
+    ]
+  },
+  {
+    "id": "L10",
+    "schwierigkeit": "mittel",
+    "thema": "it-dienste",
+    "quellen": [
+      {
+        "titel": "Versionshinweise der Lernplattform",
+        "typ": "Software-Dokumentation",
+        "text": "Version 5.1 (Oktober): Die maximale Dateigröße für Abgaben wurde von 50 MB auf 200 MB erhöht. Lehrende können Abgabefristen jetzt für einzelne Studierende verlängern, etwa bei einem Nachteilsausgleich. Die Benachrichtigungen lassen sich in den Profileinstellungen getrennt nach Kursen abschalten. Bekannte Einschränkung: Beim Export von Bewertungen werden Umlaute in Dateinamen derzeit nicht korrekt dargestellt. Version 5.0 (April): Einführung der Gruppenabgabe. Eine Person reicht stellvertretend für die ganze Gruppe ein, alle Mitglieder sehen Abgabe und Bewertung. Neue Startseite mit Kursübersicht und Terminliste. Die maximale Dateigröße für Abgaben beträgt 50 MB. Die Unterstützung für veraltete Browser ohne aktuelle Sicherheitsupdates wurde eingestellt."
+      }
+    ],
+    "frage": "Welche Funktionen bietet die Lernplattform für Abgaben?",
+    "aussagen": [
+      { "id": "a1", "text": "Die Gruppenabgabe wurde mit Version 5.1 eingeführt.", "halluzination": true, "muster": "verwechslung", "erklaerung": "Die Gruppenabgabe kam bereits mit Version 5.0. Die Antwort verwechselt die beiden Versionen.", "beleg": "Version 5.0 (April): Einführung der Gruppenabgabe." },
+      { "id": "a2", "text": "Abgaben dürfen höchstens 50 MB groß sein.", "halluzination": true, "muster": "veraltet", "erklaerung": "50 MB galten in Version 5.0. Seit Version 5.1 liegt die Grenze bei 200 MB.", "beleg": "Die maximale Dateigröße für Abgaben wurde von 50 MB auf 200 MB erhöht." },
+      { "id": "a3", "text": "Lehrende können Abgabefristen für einzelne Studierende verlängern.", "halluzination": false, "erklaerung": "Diese Neuerung steht bei Version 5.1.", "beleg": "Lehrende können Abgabefristen jetzt für einzelne Studierende verlängern" },
+      { "id": "a4", "text": "Bei einer Gruppenabgabe sehen alle Mitglieder Abgabe und Bewertung.", "halluzination": false, "erklaerung": "So ist die Gruppenabgabe beschrieben.", "beleg": "alle Mitglieder sehen Abgabe und Bewertung" },
+      { "id": "a5", "text": "Benachrichtigungen lassen sich in den Profileinstellungen pro Kurs abschalten.", "halluzination": false, "erklaerung": "Das ist eine Neuerung von Version 5.1.", "beleg": "Die Benachrichtigungen lassen sich in den Profileinstellungen getrennt nach Kursen abschalten." }
+    ]
+  },
+  {
+    "id": "L11",
+    "schwierigkeit": "mittel",
+    "thema": "pruefungsordnung",
+    "quellen": [
+      {
+        "titel": "Prüfungsordnung Bachelor, § 22 Bachelorarbeit (Auszug)",
+        "typ": "Prüfungsordnung",
+        "text": "(1) Zur Bachelorarbeit wird zugelassen, wer mindestens 120 Leistungspunkte erworben hat. Die Anmeldung erfolgt über das Prüfungsamt; das Thema wird von der betreuenden Person ausgegeben. (2) Die Bearbeitungszeit beträgt zwölf Wochen. Auf begründeten Antrag kann der Prüfungsausschuss die Bearbeitungszeit einmalig um bis zu vier Wochen verlängern. Bei Krankheit wird die Bearbeitungszeit für die Dauer der nachgewiesenen Erkrankung unterbrochen. (3) Das Thema kann einmal und nur innerhalb der ersten vier Wochen der Bearbeitungszeit zurückgegeben werden. (4) Die Arbeit soll einen Umfang von 30 bis 40 Seiten haben und ist in elektronischer Form über das Campusportal einzureichen. (5) Die Arbeit wird von zwei Prüfenden bewertet."
+      }
+    ],
+    "frage": "Welche Regeln gelten für die Bachelorarbeit?",
+    "aussagen": [
+      { "id": "a1", "text": "Für die Zulassung zur Bachelorarbeit braucht man mindestens 120 Leistungspunkte.", "halluzination": false, "erklaerung": "Das regelt Absatz 1.", "beleg": "Zur Bachelorarbeit wird zugelassen, wer mindestens 120 Leistungspunkte erworben hat." },
+      { "id": "a2", "text": "Die Bearbeitungszeit von zwölf Wochen kann auf begründeten Antrag verlängert werden, bei Bedarf auch mehrfach um jeweils bis zu vier Wochen.", "halluzination": true, "muster": "teilweise", "erklaerung": "Die Verlängerung ist nur einmalig möglich. Der wahre Kern (Verlängerung auf Antrag) wird um eine Wiederholbarkeit erweitert, die die Quelle nicht hergibt.", "beleg": "Auf begründeten Antrag kann der Prüfungsausschuss die Bearbeitungszeit einmalig um bis zu vier Wochen verlängern." },
+      { "id": "a3", "text": "Bei nachgewiesener Krankheit wird die Bearbeitungszeit unterbrochen.", "halluzination": false, "erklaerung": "Das steht in Absatz 2.", "beleg": "Bei Krankheit wird die Bearbeitungszeit für die Dauer der nachgewiesenen Erkrankung unterbrochen." },
+      { "id": "a4", "text": "Das Thema darf nur innerhalb der ersten vier Wochen zurückgegeben werden.", "halluzination": false, "erklaerung": "Das regelt Absatz 3.", "beleg": "Das Thema kann einmal und nur innerhalb der ersten vier Wochen der Bearbeitungszeit zurückgegeben werden." },
+      { "id": "a5", "text": "Die Arbeit wird elektronisch über das Campusportal eingereicht.", "halluzination": false, "erklaerung": "Das steht in Absatz 4.", "beleg": "ist in elektronischer Form über das Campusportal einzureichen" },
+      { "id": "a6", "text": "Zwei Prüfende bewerten die Arbeit.", "halluzination": false, "erklaerung": "Das regelt Absatz 5.", "beleg": "Die Arbeit wird von zwei Prüfenden bewertet." }
+    ]
+  },
+  {
+    "id": "L12",
+    "schwierigkeit": "leicht",
+    "thema": "studienorganisation",
+    "quellen": [
+      {
+        "titel": "Erstsemesterwoche der Fachschaft",
+        "typ": "Aushang",
+        "text": "Willkommen an der Uni! Vom 6. bis 10. Oktober organisiert die Fachschaft eine Erstsemesterwoche für alle neuen Studierenden im Bachelor Sozialwissenschaften. Montag, 10 Uhr: Begrüßung im Hörsaal A1 mit dem Studiendekanat. Dienstag: Campusrallye in Kleingruppen, Treffpunkt 11 Uhr vor der Mensa. Mittwoch: Bibliotheksführung in drei Durchgängen; dafür ist eine Anmeldung über die Fachschaftsseite nötig, weil die Plätze begrenzt sind. Donnerstag ab 19 Uhr: Kennenlernabend im Fachschaftsraum. Freitag, 10 bis 13 Uhr: offene Stundenplanberatung. Alle Angebote sind freiwillig und kostenlos. Fragen beantworten wir gern per E-Mail oder während unserer Sprechstunde dienstags von 12 bis 14 Uhr."
+      }
+    ],
+    "frage": "Was passiert in der Erstsemesterwoche?",
+    "aussagen": [
+      { "id": "a1", "text": "Am Montag um 10 Uhr gibt es eine Begrüßung im Hörsaal A1.", "halluzination": false, "erklaerung": "Termin und Ort stehen im Aushang.", "beleg": "Montag, 10 Uhr: Begrüßung im Hörsaal A1 mit dem Studiendekanat." },
+      { "id": "a2", "text": "Für die Bibliotheksführung muss man sich vorher anmelden.", "halluzination": false, "erklaerung": "Der Aushang nennt die Anmeldung und den Grund dafür.", "beleg": "dafür ist eine Anmeldung über die Fachschaftsseite nötig, weil die Plätze begrenzt sind" },
+      { "id": "a3", "text": "Wer an allen Programmpunkten teilnimmt, erhält eine Bescheinigung für das Mentoring-Modul.", "halluzination": true, "muster": "fehlende-quelle", "erklaerung": "Von einer Bescheinigung oder einem Mentoring-Modul steht im Aushang nichts. Die Behauptung ist frei hinzugefügt.", "beleg": "Alle Angebote sind freiwillig und kostenlos." },
+      { "id": "a4", "text": "Die Campusrallye startet am Dienstag um 11 Uhr vor der Mensa.", "halluzination": false, "erklaerung": "Der Treffpunkt ist im Aushang genannt.", "beleg": "Treffpunkt 11 Uhr vor der Mensa" },
+      { "id": "a5", "text": "Am Freitagvormittag gibt es eine offene Stundenplanberatung.", "halluzination": false, "erklaerung": "Die Beratung findet von 10 bis 13 Uhr statt.", "beleg": "Freitag, 10 bis 13 Uhr: offene Stundenplanberatung." }
+    ]
+  },
+  {
+    "id": "L13",
+    "schwierigkeit": "schwer",
+    "thema": "forschung",
+    "quellen": [
+      {
+        "titel": "Abstract: Schlafdauer und Klausurleistung",
+        "typ": "Paper-Abstract",
+        "text": "Lindqvist, M. & Demir, A. (2024). Schlafdauer in der Prüfungsphase und Klausurleistung. Zeitschrift für Hochschuldidaktik und Lernforschung, 19(3), 211–229. In einer Online-Befragung gaben 860 Studierende ihre durchschnittliche Schlafdauer in den zwei Wochen vor ihren Klausuren an; die Noten wurden mit Einverständnis aus dem Prüfungssystem übernommen. Eine Schlafdauer von unter sechs Stunden ging mit schlechteren Klausurnoten einher (r = −0,21). Die Autorinnen weisen darauf hin, dass Prüfungsangst sowohl den Schlaf als auch die Leistung beeinflussen kann und dass die Schlafdauer nur selbst berichtet wurde. Sie empfehlen Längsschnittstudien mit objektiver Schlafmessung, um die Richtung des Zusammenhangs zu klären."
+      }
+    ],
+    "frage": "Was zeigt die Studie über Schlaf und Klausurnoten?",
+    "aussagen": [
+      { "id": "a1", "text": "An der Befragung nahmen 860 Studierende teil.", "halluzination": false, "erklaerung": "Die Stichprobengröße steht im Abstract.", "beleg": "In einer Online-Befragung gaben 860 Studierende ihre durchschnittliche Schlafdauer" },
+      { "id": "a2", "text": "Weniger als sechs Stunden Schlaf vor Klausuren verschlechtern die Noten messbar.", "halluzination": true, "muster": "korrelation", "erklaerung": "Die Studie findet nur einen Zusammenhang (r = −0,21) und nennt selbst eine mögliche Drittvariable: Prüfungsangst. Die Richtung ist ausdrücklich ungeklärt.", "beleg": "Die Autorinnen weisen darauf hin, dass Prüfungsangst sowohl den Schlaf als auch die Leistung beeinflussen kann" },
+      { "id": "a3", "text": "Die Autorinnen schreiben: „Schlafmangel ist der wichtigste Einzelfaktor für den Prüfungserfolg.“", "halluzination": true, "muster": "zitation", "erklaerung": "Ein solches Zitat steht nicht im Abstract. Die Autorinnen formulieren vorsichtig und empfehlen weitere Studien.", "beleg": "Sie empfehlen Längsschnittstudien mit objektiver Schlafmessung, um die Richtung des Zusammenhangs zu klären." },
+      { "id": "a4", "text": "Die Schlafdauer wurde von den Studierenden selbst angegeben.", "halluzination": false, "erklaerung": "Das nennen die Autorinnen als Einschränkung.", "beleg": "dass die Schlafdauer nur selbst berichtet wurde" },
+      { "id": "a5", "text": "Die Studie erschien 2024 in der Zeitschrift für Hochschuldidaktik und Lernforschung.", "halluzination": false, "erklaerung": "Jahr und Zeitschrift stehen in der Literaturangabe.", "beleg": "(2024). Schlafdauer in der Prüfungsphase und Klausurleistung. Zeitschrift für Hochschuldidaktik und Lernforschung" }
+    ]
+  },
+  {
+    "id": "L14",
+    "schwierigkeit": "schwer",
+    "thema": "mensa",
+    "quellen": [
+      {
+        "titel": "Nachhaltigkeit in unseren Mensen",
+        "typ": "Informationsblatt",
+        "text": "Unsere Mensen setzen auf saisonale Küche. Seit Oktober verzichtet die Mensa-Bäckerei vollständig auf Palmöl; Brötchen und Kuchen werden mit Raps- oder Sonnenblumenöl hergestellt. In den warmen Gerichten kann Palmöl in einzelnen zugekauften Produkten noch enthalten sein, etwa in Fertigsoßen. Fleischgerichte bieten wir an höchstens drei Tagen pro Woche an, ein vegetarisches Gericht gibt es täglich. Die Speisereste pro Gast sind gegenüber dem Vorjahr um 12 Prozent gesunken. Wir führen das unter anderem auf die neuen, kleineren Portionsgrößen zurück; Nachschlag ist weiterhin kostenlos."
+      },
+      {
+        "titel": "Antwort der Küchenleitung an den Studierendenrat",
+        "typ": "E-Mail",
+        "text": "Liebe Mitglieder des Studierendenrats, vielen Dank für Ihre Nachfrage zur Herkunft unserer Lebensmittel. Laut Angaben unseres Hauptlieferanten stammen rund 80 Prozent des von uns bezogenen Gemüses aus Betrieben in einem Umkreis von 150 Kilometern. Eine eigene Überprüfung dieser Angabe haben wir bisher nicht vorgenommen; wir planen aber, im kommenden Jahr Lieferscheine stichprobenartig auswerten zu lassen. Kartoffeln beziehen wir seit diesem Jahr direkt von zwei Höfen aus der Region. Gern stellen wir Ihnen die Ergebnisse in einer Ihrer nächsten Sitzungen vor. Mit freundlichen Grüßen, Ihre Küchenleitung"
+      }
+    ],
+    "frage": "Wie nachhaltig ist das Essen in der Mensa?",
+    "aussagen": [
+      { "id": "a1", "text": "Seit Oktober kocht die Mensa vollständig ohne Palmöl.", "halluzination": true, "muster": "teilweise", "erklaerung": "Der Palmöl-Verzicht gilt nur für die Mensa-Bäckerei. In warmen Gerichten kann laut Quelle noch Palmöl enthalten sein.", "beleg": "Seit Oktober verzichtet die Mensa-Bäckerei vollständig auf Palmöl" },
+      { "id": "a2", "text": "Rund 80 Prozent des Gemüses stammen aus Betrieben im Umkreis von 150 Kilometern.", "halluzination": true, "muster": "echo", "erklaerung": "Das ist eine Angabe des Lieferanten, die die Mensa selbst noch nicht überprüft hat. Die Antwort gibt sie als gesicherte Tatsache wieder.", "beleg": "Laut Angaben unseres Hauptlieferanten stammen rund 80 Prozent des von uns bezogenen Gemüses aus Betrieben in einem Umkreis von 150 Kilometern." },
+      { "id": "a3", "text": "Ein vegetarisches Gericht gibt es jeden Tag.", "halluzination": false, "erklaerung": "Das Informationsblatt sagt das ausdrücklich.", "beleg": "ein vegetarisches Gericht gibt es täglich" },
+      { "id": "a4", "text": "Kartoffeln kommen seit diesem Jahr direkt von zwei Höfen aus der Region.", "halluzination": false, "erklaerung": "Das schreibt die Küchenleitung als eigene Angabe.", "beleg": "Kartoffeln beziehen wir seit diesem Jahr direkt von zwei Höfen aus der Region." },
+      { "id": "a5", "text": "Pro Gast bleiben 12 Prozent weniger Speisereste übrig als im Vorjahr.", "halluzination": false, "erklaerung": "Der Rückgang ist im Informationsblatt genannt.", "beleg": "Die Speisereste pro Gast sind gegenüber dem Vorjahr um 12 Prozent gesunken." }
+    ]
+  },
+  {
+    "id": "L15",
+    "schwierigkeit": "schwer",
+    "thema": "bibliothek",
+    "quellen": [
+      {
+        "titel": "Protokoll der Bibliothekskommission (Auszug)",
+        "typ": "Sitzungsprotokoll",
+        "text": "Anwesend: Prof. Dr. Ilse Hartmann (Institut für Linguistik, Vorsitz), Dr. Jonas Hartmann (Universitätsbibliothek, Erwerbung), Vertretungen der Fakultäten und der Studierenden. TOP 2: Zeitschriftenetat. Dr. Jonas Hartmann berichtet, dass die Preise für Zeitschriften erneut um durchschnittlich 6 Prozent gestiegen sind. Die Kommission beschließt die Abbestellung von 14 Print-Abonnements zum Jahresende; für 9 dieser Titel bleibt der Zugriff auf die elektronische Ausgabe erhalten. TOP 3: Datenbanken. Prof. Dr. Ilse Hartmann stellt den Antrag des Instituts für Linguistik vor, die Korpusdatenbank LexiBase zu lizenzieren. Die jährlichen Kosten liegen bei rund 18.000 Euro. Da die Finanzierung noch nicht geklärt ist, wird die Entscheidung auf die nächste Sitzung im Februar vertagt."
+      }
+    ],
+    "frage": "Was hat die Bibliothekskommission beschlossen?",
+    "aussagen": [
+      { "id": "a1", "text": "Die Zeitschriftenpreise sind im Schnitt um 6 Prozent gestiegen.", "halluzination": false, "erklaerung": "Das berichtet die Erwerbung unter TOP 2.", "beleg": "die Preise für Zeitschriften erneut um durchschnittlich 6 Prozent gestiegen sind" },
+      { "id": "a2", "text": "Zum Jahresende werden 14 Print-Abonnements abbestellt.", "halluzination": false, "erklaerung": "Das ist ein Beschluss unter TOP 2.", "beleg": "Die Kommission beschließt die Abbestellung von 14 Print-Abonnements zum Jahresende" },
+      { "id": "a3", "text": "Für 9 der abbestellten Titel bleibt die elektronische Ausgabe zugänglich.", "halluzination": false, "erklaerung": "Das steht direkt im Beschluss.", "beleg": "für 9 dieser Titel bleibt der Zugriff auf die elektronische Ausgabe erhalten" },
+      { "id": "a4", "text": "Den Antrag auf Lizenzierung von LexiBase stellte Dr. Jonas Hartmann von der Universitätsbibliothek vor.", "halluzination": true, "muster": "verwechslung", "erklaerung": "Den Antrag stellte Prof. Dr. Ilse Hartmann vom Institut für Linguistik vor. Die Antwort verwechselt zwei Personen mit gleichem Nachnamen.", "beleg": "Prof. Dr. Ilse Hartmann stellt den Antrag des Instituts für Linguistik vor" },
+      { "id": "a5", "text": "Die Kommission hat die Lizenzierung der Korpusdatenbank LexiBase für rund 18.000 Euro jährlich beschlossen.", "halluzination": true, "muster": "geplant", "erklaerung": "Über LexiBase wurde nicht entschieden: Die Entscheidung ist auf Februar vertagt, weil die Finanzierung offen ist. Ein Antrag wird als Beschluss dargestellt.", "beleg": "wird die Entscheidung auf die nächste Sitzung im Februar vertagt" }
+    ]
+  },
+  {
+    "id": "L16",
+    "schwierigkeit": "schwer",
+    "thema": "it-dienste",
+    "quellen": [
+      {
+        "titel": "Bilanz nach einem halben Jahr Zwei-Faktor-Authentifizierung",
+        "typ": "Rundmail",
+        "text": "Liebe Angehörige der Universität, seit März ist die Zwei-Faktor-Authentifizierung (2FA) für alle Konten verpflichtend. Rund 97 Prozent der aktiven Konten haben inzwischen einen zweiten Faktor eingerichtet. Seit März ist die Zahl der gemeldeten kompromittierten Konten um etwa 70 Prozent zurückgegangen. Im gleichen Zeitraum haben wir allerdings auch einen neuen Spamfilter aktiviert und die Schulungen zu Phishing ausgeweitet; welcher Anteil des Rückgangs auf welche Maßnahme zurückgeht, lässt sich nicht sagen. Wichtig: 2FA erschwert die Übernahme von Konten durch Phishing erheblich, bietet aber keinen vollständigen Schutz – etwa wenn Codes auf gefälschten Anmeldeseiten eingegeben werden. Prüfen Sie daher vor jeder Anmeldung die Adresse im Browser. Verdächtige Mails leiten Sie bitte an die Meldeadresse der IT-Sicherheit weiter."
+      }
+    ],
+    "frage": "Hat sich die Zwei-Faktor-Authentifizierung bewährt?",
+    "aussagen": [
+      { "id": "a1", "text": "Rund 97 Prozent der aktiven Konten haben einen zweiten Faktor eingerichtet.", "halluzination": false, "erklaerung": "Die Quote nennt die Rundmail.", "beleg": "Rund 97 Prozent der aktiven Konten haben inzwischen einen zweiten Faktor eingerichtet." },
+      { "id": "a2", "text": "Die Einführung der 2FA hat die Zahl kompromittierter Konten um etwa 70 Prozent gesenkt.", "halluzination": true, "muster": "korrelation", "erklaerung": "Der Rückgang fällt zeitlich mit drei Maßnahmen zusammen. Die Quelle sagt ausdrücklich, dass sich der Anteil der 2FA daran nicht bestimmen lässt.", "beleg": "welcher Anteil des Rückgangs auf welche Maßnahme zurückgeht, lässt sich nicht sagen" },
+      { "id": "a3", "text": "Mit 2FA sind die Konten wirksam vor Phishing geschützt.", "halluzination": true, "muster": "schlagzeile", "erklaerung": "Laut Quelle erschwert 2FA Phishing erheblich, bietet aber keinen vollständigen Schutz. Diese Einschränkung fällt in der Antwort weg.", "beleg": "2FA erschwert die Übernahme von Konten durch Phishing erheblich, bietet aber keinen vollständigen Schutz" },
+      { "id": "a4", "text": "Seit März ist 2FA für alle Konten verpflichtend.", "halluzination": false, "erklaerung": "Das steht gleich am Anfang der Rundmail.", "beleg": "seit März ist die Zwei-Faktor-Authentifizierung (2FA) für alle Konten verpflichtend" },
+      { "id": "a5", "text": "Vor jeder Anmeldung sollte man die Adresse im Browser prüfen.", "halluzination": false, "erklaerung": "Das empfiehlt die IT-Sicherheit ausdrücklich.", "beleg": "Prüfen Sie daher vor jeder Anmeldung die Adresse im Browser." }
+    ]
+  },
+  {
+    "id": "L17",
+    "schwierigkeit": "schwer",
+    "thema": "pruefungsordnung",
+    "quellen": [
+      {
+        "titel": "Prüfungsordnung 2019, § 9 (Auszug)",
+        "typ": "Prüfungsordnung",
+        "text": "§ 9 Anmeldung und Abmeldung. (1) Zu jeder Modulprüfung ist eine Anmeldung über das Campusportal erforderlich. Die Anmeldung muss spätestens vier Wochen vor dem Prüfungstermin erfolgen. (2) Eine Abmeldung ist bis eine Woche vor dem Prüfungstermin ohne Angabe von Gründen möglich. (3) Wer an einer Prüfung teilnimmt, ohne angemeldet zu sein, erhält keine Bewertung. (4) Die Prüfungstermine werden spätestens sechs Wochen vor Beginn des Prüfungszeitraums bekannt gegeben. Für Wiederholungsprüfungen gilt das gleiche Verfahren; eine automatische Anmeldung zur Wiederholung erfolgt nicht."
+      },
+      {
+        "titel": "Zweite Änderungsordnung (2025)",
+        "typ": "Amtliche Bekanntmachung",
+        "text": "Artikel 1: Die Prüfungsordnung für den Bachelorstudiengang vom 12. Juni 2019 wird wie folgt geändert: 1. § 9 Abs. 1 Satz 2 wird wie folgt gefasst: „Die Anmeldung muss spätestens zwei Wochen vor dem Prüfungstermin erfolgen.“ 2. § 9 Abs. 4 Satz 2 wird wie folgt gefasst: „Zu Wiederholungsprüfungen werden Studierende automatisch angemeldet.“ Artikel 2: Diese Änderungsordnung tritt am Tag nach ihrer Veröffentlichung in den Amtlichen Mitteilungen in Kraft. Sie gilt für alle Studierenden, die im Bachelorstudiengang eingeschrieben sind. Ausgefertigt aufgrund des Beschlusses des Fakultätsrats vom 9. April 2025."
+      }
+    ],
+    "frage": "Bis wann muss ich mich zu einer Prüfung anmelden, und was gilt für die Abmeldung?",
+    "aussagen": [
+      { "id": "a1", "text": "Die Anmeldung muss spätestens vier Wochen vor dem Prüfungstermin erfolgen.", "halluzination": true, "muster": "veraltet", "erklaerung": "Das war die Regel von 2019. Die Änderungsordnung von 2025 hat die Frist auf zwei Wochen verkürzt.", "beleg": "Die Anmeldung muss spätestens zwei Wochen vor dem Prüfungstermin erfolgen." },
+      { "id": "a2", "text": "In § 9 heißt es: „Eine Abmeldung ist bis zum Vortag der Prüfung ohne Angabe von Gründen möglich.“", "halluzination": true, "muster": "zitation", "erklaerung": "Das Zitat ist verfälscht: Laut § 9 Abs. 2 ist die Abmeldung nur bis eine Woche vor dem Termin möglich. Die Antwort gibt einen Wortlaut als Zitat aus, den es so nicht gibt.", "beleg": "Eine Abmeldung ist bis eine Woche vor dem Prüfungstermin ohne Angabe von Gründen möglich." },
+      { "id": "a3", "text": "Zu Wiederholungsprüfungen wird man inzwischen automatisch angemeldet.", "halluzination": false, "erklaerung": "Das hat die Änderungsordnung neu geregelt.", "beleg": "Zu Wiederholungsprüfungen werden Studierende automatisch angemeldet." },
+      { "id": "a4", "text": "Wer ohne Anmeldung an einer Prüfung teilnimmt, erhält keine Bewertung.", "halluzination": false, "erklaerung": "Das regelt § 9 Abs. 3, der nicht geändert wurde.", "beleg": "Wer an einer Prüfung teilnimmt, ohne angemeldet zu sein, erhält keine Bewertung." },
+      { "id": "a5", "text": "Die Prüfungstermine stehen spätestens sechs Wochen vor Beginn des Prüfungszeitraums fest.", "halluzination": false, "erklaerung": "Das regelt § 9 Abs. 4 Satz 1, der weiter gilt.", "beleg": "Die Prüfungstermine werden spätestens sechs Wochen vor Beginn des Prüfungszeitraums bekannt gegeben." }
+    ]
+  },
+  {
+    "id": "L18",
+    "schwierigkeit": "mittel",
+    "thema": "studienorganisation",
+    "quellen": [
+      {
+        "titel": "Erasmus-Bewerbung 2027/28",
+        "typ": "E-Mail",
+        "text": "Liebe Studierende, die Bewerbungsphase für einen Erasmus-Aufenthalt im Studienjahr 2027/28 läuft bis zum 31. Januar. Bewerbungen sind ausschließlich über das Mobility-Portal möglich. Bitte laden Sie dort ein Motivationsschreiben, einen aktuellen Notenspiegel und einen Sprachnachweis auf dem Niveau B2 in der Unterrichtssprache der Gasthochschule hoch. Die monatliche Förderrate liegt je nach Zielland zwischen 490 und 690 Euro. Studierende mit Kind oder mit Behinderung können eine zusätzliche Pauschale beantragen. Die Auswahlgespräche finden in der zweiten Februarhälfte statt. Viele Grüße, Ihr International Office"
+      },
+      {
+        "titel": "FAQ: Anerkennung von Studienleistungen",
+        "typ": "FAQ",
+        "text": "Werden meine Leistungen aus dem Ausland anerkannt? In unserer letzten Umfrage berichteten die meisten Rückkehrenden, dass ihre Leistungen problemlos anerkannt wurden. Maßgeblich für die Anerkennung ist jedoch allein das Learning Agreement, das Sie vor der Abreise mit Ihrer Fachstudienberatung abschließen. Kurse, die nicht im Learning Agreement stehen, werden nur nach Einzelfallprüfung anerkannt. Änderungen am Learning Agreement müssen Sie spätestens fünf Wochen nach Semesterbeginn an der Gasthochschule beantragen. Die Umrechnung der Noten erfolgt nach der Tabelle Ihrer Fakultät. Bei Fragen hilft Ihnen die Fachstudienberatung weiter."
+      }
+    ],
+    "frage": "Wie bewerbe ich mich für Erasmus, und werden meine Leistungen anerkannt?",
+    "aussagen": [
+      { "id": "a1", "text": "Bewerbungen für das Studienjahr 2027/28 sind bis zum 31. Januar möglich.", "halluzination": false, "erklaerung": "Die Frist steht in der E-Mail.", "beleg": "die Bewerbungsphase für einen Erasmus-Aufenthalt im Studienjahr 2027/28 läuft bis zum 31. Januar" },
+      { "id": "a2", "text": "Die monatliche Förderrate liegt je nach Zielland zwischen 490 und 790 Euro.", "halluzination": true, "muster": "zahl", "erklaerung": "Laut E-Mail liegt die Obergrenze bei 690 Euro, nicht bei 790 Euro.", "beleg": "Die monatliche Förderrate liegt je nach Zielland zwischen 490 und 690 Euro." },
+      { "id": "a3", "text": "Erforderlich ist unter anderem ein Sprachnachweis auf dem Niveau B2.", "halluzination": false, "erklaerung": "Der Sprachnachweis ist in der E-Mail genannt.", "beleg": "einen Sprachnachweis auf dem Niveau B2" },
+      { "id": "a4", "text": "Im Ausland erbrachte Leistungen werden problemlos anerkannt.", "halluzination": true, "muster": "echo", "erklaerung": "Die FAQ gibt nur wieder, was Rückkehrende in einer Umfrage berichteten, und betont, dass allein das Learning Agreement maßgeblich ist. Aus einem Erfahrungsbericht wird eine allgemeine Tatsache.", "beleg": "In unserer letzten Umfrage berichteten die meisten Rückkehrenden, dass ihre Leistungen problemlos anerkannt wurden." },
+      { "id": "a5", "text": "Für die Anerkennung ist das vor der Abreise geschlossene Learning Agreement maßgeblich.", "halluzination": false, "erklaerung": "So steht es in der FAQ.", "beleg": "Maßgeblich für die Anerkennung ist jedoch allein das Learning Agreement, das Sie vor der Abreise mit Ihrer Fachstudienberatung abschließen." },
+      { "id": "a6", "text": "Änderungen am Learning Agreement sind bis fünf Wochen nach Semesterbeginn an der Gasthochschule zu beantragen.", "halluzination": false, "erklaerung": "Die Frist nennt die FAQ.", "beleg": "Änderungen am Learning Agreement müssen Sie spätestens fünf Wochen nach Semesterbeginn an der Gasthochschule beantragen." }
+    ]
+  },
+  {
+    "id": "L19",
+    "schwierigkeit": "schwer",
+    "thema": "forschung",
+    "quellen": [
+      {
+        "titel": "Neues Zentrum für Datenkompetenz gegründet",
+        "typ": "Pressemitteilung",
+        "text": "Die Universität hat das Zentrum für Datenkompetenz in den Wissenschaften gegründet. Getragen wird es von drei Fakultäten: der Philosophischen, der Mathematisch-Naturwissenschaftlichen und der Medizinischen Fakultät. Das Zentrum bündelt Lehrangebote zu Statistik, Programmierung und Forschungsdatenmanagement und berät Forschende bei der Planung datenintensiver Projekte. Ab 2027 soll ein strukturiertes Promotionsprogramm mit bis zu 20 Promovierenden starten; die Ausschreibung der Stellen ist für das Frühjahr vorgesehen. Bereits im kommenden Semester bietet das Zentrum ein Zertifikat „Datenkompetenz“ an, das Studierende aller Fachrichtungen im Wahlbereich erwerben können. Die Gründungsdirektorin, Prof. Dr. Saskia Ondrej, betont: „Datenkompetenz ist heute in fast jedem Fach gefragt.“"
+      }
+    ],
+    "frage": "Was macht das neue Zentrum für Datenkompetenz?",
+    "aussagen": [
+      { "id": "a1", "text": "Das Zentrum wird von drei Fakultäten getragen.", "halluzination": false, "erklaerung": "Die drei Fakultäten sind in der Pressemitteilung aufgezählt.", "beleg": "Getragen wird es von drei Fakultäten" },
+      { "id": "a2", "text": "Am Zentrum forschen bis zu 20 Promovierende in einem strukturierten Promotionsprogramm.", "halluzination": true, "muster": "geplant", "erklaerung": "Das Promotionsprogramm soll erst ab 2027 starten; die Stellen sind noch nicht einmal ausgeschrieben. Die Antwort stellt einen Plan als laufenden Betrieb dar.", "beleg": "Ab 2027 soll ein strukturiertes Promotionsprogramm mit bis zu 20 Promovierenden starten" },
+      { "id": "a3", "text": "Das Zentrum berät Forschende bei der Planung datenintensiver Projekte.", "halluzination": false, "erklaerung": "Die Beratung gehört laut Quelle zu den Aufgaben.", "beleg": "berät Forschende bei der Planung datenintensiver Projekte" },
+      { "id": "a4", "text": "Das Zertifikat „Datenkompetenz“ können Studierende aller Fachrichtungen erwerben und sich als Pflichtmodul anrechnen lassen.", "halluzination": true, "muster": "teilweise", "erklaerung": "Die Quelle nennt nur den Wahlbereich. Die Anrechnung als Pflichtmodul ist eine unzulässige Erweiterung des wahren Kerns.", "beleg": "das Studierende aller Fachrichtungen im Wahlbereich erwerben können" },
+      { "id": "a5", "text": "Laut Gründungsdirektorin ist Datenkompetenz heute in fast jedem Fach gefragt.", "halluzination": false, "erklaerung": "Das Zitat steht so in der Pressemitteilung.", "beleg": "Datenkompetenz ist heute in fast jedem Fach gefragt." }
+    ]
+  },
+  {
+    "id": "L20",
+    "schwierigkeit": "leicht",
+    "thema": "mensa",
+    "quellen": [
+      {
+        "titel": "Hinweise zur Kennzeichnung im Speiseplan",
+        "typ": "Informationsblatt",
+        "text": "Im Speiseplan und an den Ausgabetheken sind alle Gerichte gekennzeichnet. Das Symbol V steht für vegetarische Gerichte, VG für vegane Gerichte. Gerichte mit Schweinefleisch sind mit S, Gerichte mit Rindfleisch mit R markiert. Die 14 Hauptallergene sind in der Zutatenliste an der Ausgabe und in der Mensa-App angegeben. Da in unseren Küchen viele Zutaten gleichzeitig verarbeitet werden, können wir Spuren von Allergenen nicht ausschließen. Wenn Sie eine schwere Allergie haben, sprechen Sie bitte vor der Bestellung das Ausgabepersonal an; auf Wunsch zeigen wir Ihnen die vollständige Rezeptur. Der Speiseplan der Folgewoche erscheint jeweils am Donnerstag."
+      }
+    ],
+    "frage": "Wie erkenne ich im Speiseplan vegane Gerichte und Allergene?",
+    "aussagen": [
+      { "id": "a1", "text": "Vegane Gerichte sind mit VG gekennzeichnet.", "halluzination": false, "erklaerung": "Das Symbol ist im Informationsblatt erklärt.", "beleg": "VG für vegane Gerichte" },
+      { "id": "a2", "text": "Die Allergene werden zusätzlich auf den Bildschirmen an den Mensa-Eingängen angezeigt.", "halluzination": true, "muster": "fehlende-quelle", "erklaerung": "Die Quelle nennt nur die Zutatenliste an der Ausgabe und die Mensa-App. Bildschirme an den Eingängen kommen nicht vor.", "beleg": "Die 14 Hauptallergene sind in der Zutatenliste an der Ausgabe und in der Mensa-App angegeben." },
+      { "id": "a3", "text": "Spuren von Allergenen kann die Mensa nicht ausschließen.", "halluzination": false, "erklaerung": "Das Informationsblatt weist darauf hin.", "beleg": "können wir Spuren von Allergenen nicht ausschließen" },
+      { "id": "a4", "text": "Auf Wunsch zeigt das Personal die vollständige Rezeptur.", "halluzination": false, "erklaerung": "Das Angebot steht in der Quelle.", "beleg": "auf Wunsch zeigen wir Ihnen die vollständige Rezeptur" },
+      { "id": "a5", "text": "Der Speiseplan für die nächste Woche erscheint donnerstags.", "halluzination": false, "erklaerung": "Der Erscheinungstag ist genannt.", "beleg": "Der Speiseplan der Folgewoche erscheint jeweils am Donnerstag." }
+    ]
+  },
+  {
+    "id": "L21",
+    "schwierigkeit": "leicht",
+    "thema": "bibliothek",
+    "quellen": [
+      {
+        "titel": "Gruppenarbeitsräume buchen",
+        "typ": "Hilfeseite",
+        "text": "Die Bibliothek bietet zwölf Gruppenarbeitsräume für Lerngruppen von zwei bis sechs Personen. Die Räume sind mit Whiteboard, Bildschirm und HDMI-Anschluss ausgestattet. Gebucht wird über das Raumbuchungssystem auf der Bibliothekswebsite, frühestens 14 Tage im Voraus. Pro Lerngruppe sind höchstens drei Stunden pro Tag möglich. Wird eine Buchung nicht innerhalb von 15 Minuten nach Beginn angetreten, verfällt sie und der Raum wird wieder freigegeben. Bitte hinterlassen Sie den Raum so, wie Sie ihn vorgefunden haben, und wischen Sie das Whiteboard ab. Essen ist in den Gruppenräumen nicht gestattet, Getränke in verschließbaren Flaschen sind erlaubt."
+      }
+    ],
+    "frage": "Wie kann ich einen Gruppenarbeitsraum in der Bibliothek nutzen?",
+    "aussagen": [
+      { "id": "a1", "text": "Die Räume sind für Lerngruppen von zwei bis sechs Personen gedacht.", "halluzination": false, "erklaerung": "Die Gruppengröße steht auf der Hilfeseite.", "beleg": "für Lerngruppen von zwei bis sechs Personen" },
+      { "id": "a2", "text": "Gebucht werden kann frühestens 14 Tage im Voraus.", "halluzination": false, "erklaerung": "Der Buchungszeitraum ist genannt.", "beleg": "frühestens 14 Tage im Voraus" },
+      { "id": "a3", "text": "Pro Lerngruppe sind höchstens drei Stunden pro Tag möglich, bei freien Kapazitäten auch länger.", "halluzination": true, "muster": "teilweise", "erklaerung": "Die Höchstdauer von drei Stunden steht in der Quelle, eine Ausnahme bei freien Kapazitäten nicht. Der wahre Kern wird um eine erfundene Ausnahme erweitert.", "beleg": "Pro Lerngruppe sind höchstens drei Stunden pro Tag möglich." },
+      { "id": "a4", "text": "Eine Buchung verfällt, wenn man nicht innerhalb von 15 Minuten nach Beginn erscheint.", "halluzination": false, "erklaerung": "Die Verfallsregel steht auf der Hilfeseite.", "beleg": "Wird eine Buchung nicht innerhalb von 15 Minuten nach Beginn angetreten, verfällt sie" },
+      { "id": "a5", "text": "Getränke in verschließbaren Flaschen sind erlaubt.", "halluzination": false, "erklaerung": "Das ist ausdrücklich gestattet.", "beleg": "Getränke in verschließbaren Flaschen sind erlaubt" }
+    ]
+  },
+  {
+    "id": "L22",
+    "schwierigkeit": "leicht",
+    "thema": "it-dienste",
+    "quellen": [
+      {
+        "titel": "Wartungsankündigung des Rechenzentrums",
+        "typ": "E-Mail",
+        "text": "Liebe Nutzerinnen und Nutzer, wegen eines Software-Updates ist das E-Mail-System am Samstag, 23. November, von 6 bis 10 Uhr nicht erreichbar. In dieser Zeit eingehende Nachrichten gehen nicht verloren, sondern werden nach Abschluss der Arbeiten zugestellt. Das Campusportal und das WLAN sind von der Wartung nicht betroffen. Die Lernplattform wird bereits am Freitag, 22. November, ab 20 Uhr für etwa eine Stunde neu gestartet. Bitte speichern Sie laufende Abgaben rechtzeitig. Aktuelle Informationen zum Stand der Arbeiten finden Sie auf der Statusseite des Rechenzentrums. Wir bitten um Ihr Verständnis. Ihr Rechenzentrum"
+      }
+    ],
+    "frage": "Welche Dienste sind am Wochenende nicht erreichbar?",
+    "aussagen": [
+      { "id": "a1", "text": "Das E-Mail-System ist am Samstag, 23. November, von 6 bis 10 Uhr nicht erreichbar.", "halluzination": false, "erklaerung": "Datum und Zeitfenster stehen in der Ankündigung.", "beleg": "ist das E-Mail-System am Samstag, 23. November, von 6 bis 10 Uhr nicht erreichbar" },
+      { "id": "a2", "text": "Mails, die während der Wartung eingehen, werden danach zugestellt.", "halluzination": false, "erklaerung": "Die Ankündigung sichert das ausdrücklich zu.", "beleg": "In dieser Zeit eingehende Nachrichten gehen nicht verloren, sondern werden nach Abschluss der Arbeiten zugestellt." },
+      { "id": "a3", "text": "Die Lernplattform wird am Samstag ab 20 Uhr für etwa eine Stunde neu gestartet.", "halluzination": true, "muster": "zahl", "erklaerung": "Der Neustart der Lernplattform ist für Freitag, 22. November, angekündigt – nicht für Samstag.", "beleg": "Die Lernplattform wird bereits am Freitag, 22. November, ab 20 Uhr für etwa eine Stunde neu gestartet." },
+      { "id": "a4", "text": "Campusportal und WLAN sind von der Wartung nicht betroffen.", "halluzination": false, "erklaerung": "Das steht so in der E-Mail.", "beleg": "Das Campusportal und das WLAN sind von der Wartung nicht betroffen." }
+    ]
+  },
+  {
+    "id": "L23",
+    "schwierigkeit": "mittel",
+    "thema": "pruefungsordnung",
+    "quellen": [
+      {
+        "titel": "Hinweise des Prüfungsamts zum Nachteilsausgleich",
+        "typ": "E-Mail",
+        "text": "Liebe Studierende, wer aufgrund einer Behinderung oder chronischen Erkrankung Prüfungen nicht unter den üblichen Bedingungen ablegen kann, hat Anspruch auf einen Nachteilsausgleich, zum Beispiel eine verlängerte Bearbeitungszeit oder einen separaten Raum. Anträge sind spätestens vier Wochen vor der Prüfung schriftlich beim Prüfungsausschuss zu stellen. Beizufügen ist eine fachärztliche Stellungnahme, aus der die Auswirkungen auf die Prüfungssituation hervorgehen; eine Diagnose muss nicht genannt werden. Die Beratungsstelle für Studierende mit Behinderung unterstützt Sie bei der Antragstellung. Nach Rückmeldung einzelner Lehrender werden Anträge meist innerhalb von zwei Wochen bearbeitet; eine verbindliche Bearbeitungsfrist gibt es nicht. Ein einmal bewilligter Nachteilsausgleich kann für mehrere Semester gelten."
+      }
+    ],
+    "frage": "Wie beantrage ich einen Nachteilsausgleich?",
+    "aussagen": [
+      { "id": "a1", "text": "Der Antrag muss spätestens vier Wochen vor der Prüfung beim Prüfungsausschuss gestellt werden.", "halluzination": false, "erklaerung": "Frist und Adressat stehen in der E-Mail.", "beleg": "Anträge sind spätestens vier Wochen vor der Prüfung schriftlich beim Prüfungsausschuss zu stellen." },
+      { "id": "a2", "text": "In der fachärztlichen Stellungnahme muss keine Diagnose genannt werden.", "halluzination": false, "erklaerung": "Das stellt das Prüfungsamt ausdrücklich klar.", "beleg": "eine Diagnose muss nicht genannt werden" },
+      { "id": "a3", "text": "Anträge werden in der Regel innerhalb von zwei Wochen bearbeitet.", "halluzination": true, "muster": "echo", "erklaerung": "Das beruht nur auf Rückmeldungen einzelner Lehrender; laut Prüfungsamt gibt es keine verbindliche Frist. Die Antwort macht aus einer weitergegebenen Einschätzung eine Tatsache.", "beleg": "Nach Rückmeldung einzelner Lehrender werden Anträge meist innerhalb von zwei Wochen bearbeitet" },
+      { "id": "a4", "text": "Die Beratungsstelle für Studierende mit Behinderung hilft beim Antrag.", "halluzination": false, "erklaerung": "Die Unterstützung ist in der E-Mail genannt.", "beleg": "Die Beratungsstelle für Studierende mit Behinderung unterstützt Sie bei der Antragstellung." },
+      { "id": "a5", "text": "Ein bewilligter Nachteilsausgleich kann für mehrere Semester gelten.", "halluzination": false, "erklaerung": "Das steht im letzten Satz der E-Mail.", "beleg": "Ein einmal bewilligter Nachteilsausgleich kann für mehrere Semester gelten." }
+    ]
+  },
+  {
+    "id": "L24",
+    "schwierigkeit": "schwer",
+    "thema": "studienorganisation",
+    "quellen": [
+      {
+        "titel": "Protokoll der Studienkommission Lehramt (Auszug)",
+        "typ": "Sitzungsprotokoll",
+        "text": "TOP 2: Ergebnisse der Lehrevaluation. Frau Dr. Brandes stellt die Auswertung des Sommersemesters vor (Rücklauf 38 Prozent). In Seminaren mit weniger als 20 Teilnehmenden lag die Gesamtzufriedenheit bei durchschnittlich 1,8, in größeren Seminaren bei 2,4. Sie weist darauf hin, dass kleinere Seminare häufiger Wahlpflichtangebote mit besonders interessierten Teilnehmenden sind. TOP 3: Gruppengrößen. Die studentischen Mitglieder beantragen eine Obergrenze von 20 Teilnehmenden für alle Seminare. Die Kommission bittet die Studiengangsleitung, bis zur nächsten Sitzung zu prüfen, ob eine solche Obergrenze mit den vorhandenen Lehrkapazitäten umsetzbar ist. TOP 4: Die Kommission beschließt einstimmig, die Sprechstunden der Studienberatung in der Prüfungsphase um einen Nachmittag pro Woche zu erweitern."
+      }
+    ],
+    "frage": "Was hat die Studienkommission zu den Seminargrößen besprochen?",
+    "aussagen": [
+      { "id": "a1", "text": "Der Rücklauf der Evaluation lag bei 38 Prozent.", "halluzination": false, "erklaerung": "Der Rücklauf ist im Protokoll vermerkt.", "beleg": "(Rücklauf 38 Prozent)" },
+      { "id": "a2", "text": "Kleinere Seminare führen zu einer höheren Zufriedenheit der Studierenden.", "halluzination": true, "muster": "korrelation", "erklaerung": "Die Evaluation zeigt nur einen Unterschied. Frau Dr. Brandes nennt selbst eine andere Erklärung: Kleine Seminare sind oft Wahlpflichtangebote mit besonders interessierten Teilnehmenden.", "beleg": "Sie weist darauf hin, dass kleinere Seminare häufiger Wahlpflichtangebote mit besonders interessierten Teilnehmenden sind." },
+      { "id": "a3", "text": "In Seminaren mit weniger als 20 Teilnehmenden lag die Zufriedenheit im Schnitt bei 1,8.", "halluzination": false, "erklaerung": "Der Wert steht im Protokoll.", "beleg": "In Seminaren mit weniger als 20 Teilnehmenden lag die Gesamtzufriedenheit bei durchschnittlich 1,8" },
+      { "id": "a4", "text": "Die Kommission hat eine Obergrenze von 20 Teilnehmenden für alle Seminare beschlossen.", "halluzination": true, "muster": "geplant", "erklaerung": "Die Obergrenze haben die studentischen Mitglieder beantragt; die Kommission lässt die Umsetzbarkeit erst prüfen. Beschlossen wurde nur die Erweiterung der Sprechstunden.", "beleg": "Die Kommission bittet die Studiengangsleitung, bis zur nächsten Sitzung zu prüfen, ob eine solche Obergrenze mit den vorhandenen Lehrkapazitäten umsetzbar ist." },
+      { "id": "a5", "text": "Die Sprechstunden der Studienberatung werden in der Prüfungsphase um einen Nachmittag pro Woche erweitert.", "halluzination": false, "erklaerung": "Das ist der einstimmige Beschluss unter TOP 4.", "beleg": "die Sprechstunden der Studienberatung in der Prüfungsphase um einen Nachmittag pro Woche zu erweitern" }
+    ]
+  },
+  {
+    "id": "L25",
+    "schwierigkeit": "schwer",
+    "thema": "forschung",
+    "quellen": [
+      {
+        "titel": "Abstract: Atemübung und Arbeitsgedächtnis",
+        "typ": "Paper-Abstract",
+        "text": "Erschienen in: Zeitschrift für Lernpsychologie, 38(2), 2025. In einem Laborexperiment mit 96 Studierenden untersuchten wir, ob eine zehnminütige Atemübung die Leistung in einem anschließenden Arbeitsgedächtnistest verbessert. Die Teilnehmenden wurden zufällig der Atemübung oder einer Kontrollbedingung (Hörbuch) zugeteilt. Die Atemübung verbesserte die Testleistung geringfügig (d = 0,18). In einer explorativen Analyse war der Effekt nur bei Teilnehmenden mit hoher selbstberichteter Anspannung nachweisbar. Da Stichprobe und Effekt klein sind, ist eine Replikation mit größerer Stichprobe erforderlich, bevor Empfehlungen für reale Prüfungssituationen abgeleitet werden können."
+      },
+      {
+        "titel": "Atemübung vor der Klausur? Kleiner Effekt im Labor",
+        "typ": "Pressemitteilung",
+        "text": "Hilft tiefes Durchatmen vor einer Prüfung? Ein Team des Instituts für Psychologie hat das im Labor getestet. Teilnehmende, die vor einem Gedächtnistest zehn Minuten eine angeleitete Atemübung machten, schnitten im Mittel etwas besser ab als die Vergleichsgruppe, die ein Hörbuch hörte. „Der Effekt ist klein, und wir wissen noch nicht, ob er sich in echten Klausuren zeigt“, sagt die Studienleiterin. Das Team plant nun eine Studie mit größerer Stichprobe während der regulären Prüfungsphase. Die Atemübung ist als Audiodatei auf der Institutsseite frei verfügbar."
+      }
+    ],
+    "frage": "Hilft eine Atemübung vor Prüfungen?",
+    "aussagen": [
+      { "id": "a1", "text": "Eine zehnminütige Atemübung verbessert die Leistung des Arbeitsgedächtnisses.", "halluzination": true, "muster": "schlagzeile", "erklaerung": "Die Studie fand nur eine geringfügige Verbesserung, die explorativ nur bei stark angespannten Teilnehmenden nachweisbar war, und verlangt eine Replikation. Die Antwort streicht alle Einschränkungen.", "beleg": "Die Atemübung verbesserte die Testleistung geringfügig (d = 0,18)." },
+      { "id": "a2", "text": "Die Teilnehmenden wurden zufällig der Atemübung oder einer Hörbuch-Bedingung zugeteilt.", "halluzination": false, "erklaerung": "Das Design ist im Abstract beschrieben.", "beleg": "Die Teilnehmenden wurden zufällig der Atemübung oder einer Kontrollbedingung (Hörbuch) zugeteilt." },
+      { "id": "a3", "text": "Die Studie wurde 2025 im Journal of Cognitive Training veröffentlicht.", "halluzination": true, "muster": "zitation", "erklaerung": "Laut Abstract erschien die Studie in der Zeitschrift für Lernpsychologie. Die genannte Literaturangabe ist erfunden.", "beleg": "Erschienen in: Zeitschrift für Lernpsychologie, 38(2), 2025." },
+      { "id": "a4", "text": "Das Team plant eine größere Studie während der regulären Prüfungsphase.", "halluzination": false, "erklaerung": "Die Folgestudie ist in der Pressemitteilung als Plan angekündigt.", "beleg": "Das Team plant nun eine Studie mit größerer Stichprobe während der regulären Prüfungsphase." },
+      { "id": "a5", "text": "An dem Experiment nahmen 96 Studierende teil.", "halluzination": false, "erklaerung": "Die Zahl steht im Abstract.", "beleg": "In einem Laborexperiment mit 96 Studierenden" },
+      { "id": "a6", "text": "Die Atemübung gibt es als Audiodatei frei auf der Institutsseite.", "halluzination": false, "erklaerung": "Das steht am Ende der Pressemitteilung.", "beleg": "Die Atemübung ist als Audiodatei auf der Institutsseite frei verfügbar." }
+    ]
+  },
+  {
+    "id": "L26",
+    "schwierigkeit": "schwer",
+    "thema": "it-dienste",
+    "quellen": [
+      {
+        "titel": "PrintOne – Druckdienst (Stand: Oktober)",
+        "typ": "Software-Dokumentation",
+        "text": "Mit PrintOne drucken Sie von jedem Gerät aus auf allen Multifunktionsgeräten der Universität. Laden Sie Ihr Dokument im Webportal hoch oder senden Sie es per Mail an die Druckadresse. Am Gerät melden Sie sich mit Ihrer Campuscard an und geben die Aufträge frei. Nicht freigegebene Aufträge werden nach 24 Stunden automatisch gelöscht. Ein Schwarzweißausdruck kostet 0,05 Euro pro Seite, ein Farbausdruck 0,25 Euro. Studierende erhalten zu Beginn jedes Semesters ein Freikontingent von 100 Schwarzweißseiten; nicht genutzte Seiten verfallen am Semesterende. Das Guthaben laden Sie an den Kassenautomaten oder online auf."
+      },
+      {
+        "titel": "FAQ Druckdienst (Stand: 2024)",
+        "typ": "FAQ",
+        "text": "Wie viele Seiten kann ich kostenlos drucken? Alle Studierenden erhalten pro Semester ein Freikontingent von 50 Seiten. Wie lange bleiben meine Aufträge gespeichert? Druckaufträge, die nicht freigegeben werden, bleiben 24 Stunden im System. Kann ich auch doppelseitig drucken? Ja, doppelseitiger Druck ist voreingestellt und kann in den Druckeinstellungen geändert werden. Ein doppelseitig bedrucktes Blatt zählt als zwei Seiten. Was mache ich bei einem Papierstau? Bitte öffnen Sie das Gerät nicht selbst, sondern melden Sie die Störung über die Telefonnummer, die am Gerät angebracht ist."
+      }
+    ],
+    "frage": "Wie viel kostet Drucken an der Uni, und wie viel ist frei?",
+    "aussagen": [
+      { "id": "a1", "text": "Studierende haben pro Semester 50 Seiten frei.", "halluzination": true, "muster": "veraltet", "erklaerung": "Die 50 Seiten stammen aus der älteren FAQ von 2024. Die aktuelle Dokumentation (Stand Oktober) nennt 100 Schwarzweißseiten.", "beleg": "Studierende erhalten zu Beginn jedes Semesters ein Freikontingent von 100 Schwarzweißseiten" },
+      { "id": "a2", "text": "Das Freikontingent gilt für Schwarzweiß- und Farbdrucke; nicht genutzte Seiten verfallen am Semesterende.", "halluzination": true, "muster": "teilweise", "erklaerung": "Dass ungenutzte Seiten verfallen, stimmt. Das Kontingent umfasst laut aktueller Dokumentation aber nur Schwarzweißseiten – die Ausweitung auf Farbdruck ist nicht gedeckt.", "beleg": "Freikontingent von 100 Schwarzweißseiten" },
+      { "id": "a3", "text": "Ein Farbausdruck kostet 0,25 Euro pro Seite.", "halluzination": false, "erklaerung": "Der Preis steht in der aktuellen Dokumentation.", "beleg": "ein Farbausdruck 0,25 Euro" },
+      { "id": "a4", "text": "Nicht freigegebene Druckaufträge werden nach 24 Stunden gelöscht.", "halluzination": false, "erklaerung": "Das steht in beiden Dokumenten übereinstimmend.", "beleg": "Nicht freigegebene Aufträge werden nach 24 Stunden automatisch gelöscht." },
+      { "id": "a5", "text": "Doppelseitiger Druck ist voreingestellt.", "halluzination": false, "erklaerung": "Das beantwortet die FAQ.", "beleg": "doppelseitiger Druck ist voreingestellt" }
+    ]
+  },
+  {
+    "id": "L27",
+    "schwierigkeit": "mittel",
+    "thema": "mensa",
+    "quellen": [
+      {
+        "titel": "Ergebnisse der Gästebefragung",
+        "typ": "Pressemitteilung",
+        "text": "An der diesjährigen Gästebefragung des Studierendenwerks nahmen 3.150 Personen teil. Die Mensa Campus Süd erhielt mit der Durchschnittsnote 1,9 die beste Bewertung aller Standorte, die Mensa Campus Nord mit 2,7 die schwächste. Am häufigsten gelobt wurden die Freundlichkeit des Personals und die vegetarische Auswahl; Kritik gab es vor allem an den Wartezeiten zur Mittagszeit. Die Geschäftsführung führt das gute Abschneiden von Campus Süd selbst auf die im Frühjahr eröffnete Salatbar zurück. Für Campus Nord ist ab dem kommenden Jahr eine zusätzliche Ausgabelinie vorgesehen, um die Wartezeiten zu verkürzen. Die vollständigen Ergebnisse sind auf der Website des Studierendenwerks einsehbar."
+      }
+    ],
+    "frage": "Wie haben die Mensen in der Gästebefragung abgeschnitten?",
+    "aussagen": [
+      { "id": "a1", "text": "An der Befragung nahmen 3.150 Personen teil.", "halluzination": false, "erklaerung": "Die Teilnehmendenzahl steht im ersten Satz.", "beleg": "nahmen 3.150 Personen teil" },
+      { "id": "a2", "text": "Die Mensa Campus Nord erhielt mit der Note 1,9 die beste Bewertung.", "halluzination": true, "muster": "verwechslung", "erklaerung": "Die Note 1,9 und die beste Bewertung gehören zur Mensa Campus Süd. Campus Nord schnitt mit 2,7 am schwächsten ab.", "beleg": "Die Mensa Campus Süd erhielt mit der Durchschnittsnote 1,9 die beste Bewertung aller Standorte" },
+      { "id": "a3", "text": "Kritisiert wurden vor allem die Wartezeiten zur Mittagszeit.", "halluzination": false, "erklaerung": "Das ist der wichtigste Kritikpunkt laut Pressemitteilung.", "beleg": "Kritik gab es vor allem an den Wartezeiten zur Mittagszeit" },
+      { "id": "a4", "text": "Das gute Ergebnis von Campus Süd ist auf die neue Salatbar zurückzuführen.", "halluzination": true, "muster": "echo", "erklaerung": "Das ist die Deutung der Geschäftsführung, kein Ergebnis der Befragung. Die Antwort übernimmt eine Einschätzung als belegte Ursache.", "beleg": "Die Geschäftsführung führt das gute Abschneiden von Campus Süd selbst auf die im Frühjahr eröffnete Salatbar zurück." },
+      { "id": "a5", "text": "Gelobt wurden besonders die Freundlichkeit des Personals und die vegetarische Auswahl.", "halluzination": false, "erklaerung": "Das steht so in der Quelle.", "beleg": "Am häufigsten gelobt wurden die Freundlichkeit des Personals und die vegetarische Auswahl" }
+    ]
+  },
+  {
+    "id": "L28",
+    "schwierigkeit": "mittel",
+    "thema": "bibliothek",
+    "quellen": [
+      {
+        "titel": "Open-Access-Publikationsfonds im kommenden Jahr",
+        "typ": "E-Mail",
+        "text": "Liebe Forschende, der Open-Access-Publikationsfonds der Universitätsbibliothek steht auch im kommenden Jahr zur Verfügung. Er übernimmt Publikationsgebühren bis zu 2.000 Euro netto pro Artikel, sofern dieser in einer reinen Open-Access-Zeitschrift erscheint. Artikel in hybriden Zeitschriften werden nicht gefördert. Antragsberechtigt sind Angehörige der Universität, die als Corresponding Author verantwortlich sind. Den Antrag stellen Sie bitte vor der Annahme des Artikels über das Formular auf unserer Website. Für das kommende Jahr ist geplant, auch Open-Access-Bücher zu fördern; die Richtlinie dazu wird derzeit erarbeitet. Bei Fragen zu Verlagsverträgen berät Sie unser Team für Publikationsdienste."
+      }
+    ],
+    "frage": "Was übernimmt der Open-Access-Publikationsfonds?",
+    "aussagen": [
+      { "id": "a1", "text": "Der Fonds übernimmt bis zu 2.000 Euro netto pro Artikel in reinen Open-Access-Zeitschriften.", "halluzination": false, "erklaerung": "Höchstbetrag und Bedingung stehen in der E-Mail.", "beleg": "Er übernimmt Publikationsgebühren bis zu 2.000 Euro netto pro Artikel, sofern dieser in einer reinen Open-Access-Zeitschrift erscheint." },
+      { "id": "a2", "text": "Für Artikel in hybriden Zeitschriften gibt es keine Förderung.", "halluzination": false, "erklaerung": "Der Ausschluss ist ausdrücklich genannt.", "beleg": "Artikel in hybriden Zeitschriften werden nicht gefördert." },
+      { "id": "a3", "text": "Im kommenden Jahr fördert der Fonds zusätzlich Open-Access-Bücher.", "halluzination": true, "muster": "geplant", "erklaerung": "Die Buchförderung ist erst geplant; die Richtlinie dazu wird noch erarbeitet. Die Antwort stellt einen Plan als feststehendes Angebot dar.", "beleg": "Für das kommende Jahr ist geplant, auch Open-Access-Bücher zu fördern; die Richtlinie dazu wird derzeit erarbeitet." },
+      { "id": "a4", "text": "Der Antrag muss vor der Annahme des Artikels gestellt werden.", "halluzination": false, "erklaerung": "Den Zeitpunkt nennt die E-Mail.", "beleg": "Den Antrag stellen Sie bitte vor der Annahme des Artikels" },
+      { "id": "a5", "text": "Antragsberechtigt sind Universitätsangehörige, die als Corresponding Author verantwortlich sind.", "halluzination": false, "erklaerung": "Das steht so in der Quelle.", "beleg": "Antragsberechtigt sind Angehörige der Universität, die als Corresponding Author verantwortlich sind." }
+    ]
+  },
+  {
+    "id": "L29",
+    "schwierigkeit": "leicht",
+    "thema": "studienorganisation",
+    "quellen": [
+      {
+        "titel": "Zusätzliche Lernräume in der Prüfungsphase",
+        "typ": "Aushang",
+        "text": "Liebe Studierende, vom 27. Januar bis zum 21. Februar stehen in Gebäude 105 zusätzliche Lernräume zur Verfügung. Genutzt werden können die Seminarräume im ersten und zweiten Obergeschoss, sofern dort keine Lehrveranstaltungen oder Prüfungen stattfinden. Die aktuelle Belegung hängt an jeder Tür aus. Die Räume sind montags bis freitags von 8 bis 20 Uhr geöffnet. Eine Reservierung ist nicht möglich und nicht nötig. Bitte verhalten Sie sich leise, da in benachbarten Räumen Prüfungen stattfinden können. Steckdosen gibt es an den Fensterplätzen. Wir wünschen Ihnen viel Erfolg in der Prüfungsphase! Ihr Dezernat für Studium und Lehre"
+      }
+    ],
+    "frage": "Wo kann ich in der Prüfungsphase zusätzlich lernen?",
+    "aussagen": [
+      { "id": "a1", "text": "In der Prüfungsphase stehen alle Seminarräume im ersten und zweiten Obergeschoss von Gebäude 105 als Lernräume zur Verfügung.", "halluzination": true, "muster": "schlagzeile", "erklaerung": "Die Räume sind nur nutzbar, wenn dort keine Lehrveranstaltungen oder Prüfungen stattfinden. Die Bedingung fällt weg, und „alle“ macht die Aussage absoluter als die Quelle.", "beleg": "sofern dort keine Lehrveranstaltungen oder Prüfungen stattfinden" },
+      { "id": "a2", "text": "Das Angebot gilt vom 27. Januar bis zum 21. Februar.", "halluzination": false, "erklaerung": "Der Zeitraum steht im ersten Satz.", "beleg": "vom 27. Januar bis zum 21. Februar" },
+      { "id": "a3", "text": "Die Räume sind werktags von 8 bis 20 Uhr geöffnet.", "halluzination": false, "erklaerung": "Montag bis Freitag, 8 bis 20 Uhr, laut Aushang.", "beleg": "Die Räume sind montags bis freitags von 8 bis 20 Uhr geöffnet." },
+      { "id": "a4", "text": "Eine Reservierung ist nicht nötig.", "halluzination": false, "erklaerung": "Das steht im Aushang.", "beleg": "Eine Reservierung ist nicht möglich und nicht nötig." },
+      { "id": "a5", "text": "An den Fensterplätzen gibt es Steckdosen.", "halluzination": false, "erklaerung": "Das ist im Aushang erwähnt.", "beleg": "Steckdosen gibt es an den Fensterplätzen." }
+    ]
+  },
+  {
+    "id": "L30",
+    "schwierigkeit": "mittel",
+    "thema": "forschung",
+    "quellen": [
+      {
+        "titel": "Reisekostenzuschuss für Promovierende",
+        "typ": "E-Mail",
+        "text": "Liebe Promovierende, die Graduiertenschule unterstützt die aktive Teilnahme an wissenschaftlichen Tagungen (Vortrag oder Poster) mit einem Reisekostenzuschuss von bis zu 800 Euro pro Kalenderjahr. Antragsberechtigt sind Promovierende, die Mitglied der Graduiertenschule sind. Der Antrag muss spätestens sechs Wochen vor Reisebeginn eingehen; beizufügen sind die Annahmebestätigung des Beitrags und eine Kostenschätzung. Nach der Reise reichen Sie die Originalbelege innerhalb von vier Wochen ein. Laut einer Mitteilung der Universitätsleitung soll der Höchstbetrag ab 2027 auf 1.000 Euro steigen; ein Beschluss dazu liegt noch nicht vor. Fragen richten Sie bitte an die Geschäftsstelle."
+      }
+    ],
+    "frage": "Wie bekomme ich einen Zuschuss für eine Tagungsreise?",
+    "aussagen": [
+      { "id": "a1", "text": "Gefördert wird die aktive Tagungsteilnahme mit bis zu 800 Euro pro Kalenderjahr.", "halluzination": false, "erklaerung": "Der Höchstbetrag steht in der E-Mail.", "beleg": "mit einem Reisekostenzuschuss von bis zu 800 Euro pro Kalenderjahr" },
+      { "id": "a2", "text": "Der Zuschuss kann auch für Sommerschulen und Methodenworkshops genutzt werden.", "halluzination": true, "muster": "fehlende-quelle", "erklaerung": "Die Quelle nennt nur Tagungen mit eigenem Vortrag oder Poster. Sommerschulen und Workshops kommen nicht vor.", "beleg": "die aktive Teilnahme an wissenschaftlichen Tagungen (Vortrag oder Poster)" },
+      { "id": "a3", "text": "Der Antrag muss spätestens sechs Wochen vor Reisebeginn eingehen.", "halluzination": false, "erklaerung": "Die Frist ist genannt.", "beleg": "Der Antrag muss spätestens sechs Wochen vor Reisebeginn eingehen" },
+      { "id": "a4", "text": "Ab 2027 steigt der Höchstbetrag auf 1.000 Euro.", "halluzination": true, "muster": "geplant", "erklaerung": "Die Erhöhung ist nur angekündigt; ein Beschluss liegt laut Quelle noch nicht vor.", "beleg": "ein Beschluss dazu liegt noch nicht vor" },
+      { "id": "a5", "text": "Die Originalbelege sind innerhalb von vier Wochen nach der Reise einzureichen.", "halluzination": false, "erklaerung": "Das steht in der E-Mail.", "beleg": "Nach der Reise reichen Sie die Originalbelege innerhalb von vier Wochen ein." }
+    ]
+  }
+]

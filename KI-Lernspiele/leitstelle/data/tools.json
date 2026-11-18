@@ -1,0 +1,58 @@
+[
+  {
+    "id": "entwurf",
+    "name": "Dokument erstellen",
+    "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M4 20h4L19 9l-4-4L4 16v4z\"/><path d=\"M14 6l4 4\"/></svg>",
+    "beschreibung": "Schreibt einen eigenen Text, der weiterverwendet wird: Mail, Aushang, Formular, Anleitung. Für die Antwort an dich braucht der Agent das nicht – antworten kann er immer.",
+    "risiko": "niedrig",
+    "leerlauf": "Dokument erstellen: Ein Schriftstück entstand, das niemand gebraucht hat – eine Antwort hätte gereicht."
+  },
+  {
+    "id": "suche",
+    "name": "Suche",
+    "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><circle cx=\"11\" cy=\"11\" r=\"6\"/><path d=\"M20 20l-4.5-4.5\"/></svg>",
+    "beschreibung": "Schlägt nach, was weder im Auftrag noch im Material steht: Website, Katalog, Richtlinie.",
+    "risiko": "niedrig",
+    "leerlauf": "Suche: Die Treffer wiederholen nur, was schon im Material stand."
+  },
+  {
+    "id": "rechner",
+    "name": "Rechner",
+    "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><rect x=\"5\" y=\"3\" width=\"14\" height=\"18\" rx=\"2\"/><path d=\"M8 7h8M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01\"/></svg>",
+    "beschreibung": "Rechnet exakt: Summen, Durchschnitte, Prozente, Datumsabstände.",
+    "risiko": "niedrig",
+    "leerlauf": "Rechner: Der Rechner hatte hier nichts zu tun."
+  },
+  {
+    "id": "datei",
+    "name": "Datei lesen",
+    "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M6 3h8l4 4v14H6z\"/><path d=\"M14 3v4h4M9 12h6M9 16h6\"/></svg>",
+    "beschreibung": "Öffnet eine Datei oder einen Ordner, auf den das Material nur verweist.",
+    "risiko": "niedrig",
+    "leerlauf": "Datei lesen: Es gab keine Datei, die noch zu öffnen war – alles lag schon vor."
+  },
+  {
+    "id": "kalender",
+    "name": "Kalender prüfen",
+    "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><rect x=\"4\" y=\"5\" width=\"16\" height=\"15\" rx=\"2\"/><path d=\"M4 10h16M9 3v4M15 3v4\"/></svg>",
+    "beschreibung": "Zeigt freie Termine und Belegungen von Räumen und Personen.",
+    "risiko": "niedrig",
+    "leerlauf": "Kalender prüfen: Kein Termin stand in Frage – der Blick in den Kalender brachte nichts Neues."
+  },
+  {
+    "id": "pruefung",
+    "name": "Menschliche Prüfung",
+    "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><circle cx=\"9\" cy=\"8\" r=\"3.5\"/><path d=\"M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6\"/><path d=\"M15 11l2 2 4-4\"/></svg>",
+    "beschreibung": "Eine Person sieht das Zwischenergebnis an, korrigiert es oder gibt es frei.",
+    "risiko": "niedrig",
+    "leerlauf": "Menschliche Prüfung: Die Person nickt kurz ab – es ging aber nichts nach außen, das eine Freigabe gebraucht hätte."
+  },
+  {
+    "id": "senden",
+    "name": "Senden",
+    "icon": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\" focusable=\"false\"><path d=\"M21 3L3 11l7 3 3 7 8-18z\"/><path d=\"M10 14L21 3\"/></svg>",
+    "beschreibung": "Wirkt nach außen: verschickt Mails, bucht, bestellt, trägt ein, veröffentlicht oder löscht.",
+    "risiko": "hoch",
+    "leerlauf": "Senden: Eine Aktion nach außen wurde ausgelöst, um die niemand gebeten hat."
+  }
+]
